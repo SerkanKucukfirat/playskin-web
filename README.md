@@ -8,7 +8,7 @@ Playskin için hazırlanan yeni, animasyonlu web sitesi. Düz HTML, CSS ve tek b
 |---|---|
 | `index.html` | Ana sayfa (WebGL krom molekül sahnesi, ürün galerisi, lipozom bölümü) |
 | `hakkimizda.html` | Hakkımızda |
-| `urunler.html` | Ürünler (kategori filtresiyle 25 ürün) |
+| `urunler.html` | Ürünler (kategori filtresiyle 69 ürün, 24’er gösterim) |
 | `urun.html` | Ürün detay şablonu (NAD+ Peptide Serum) |
 | `laboratuvar.html` | Laboratuvarımız ve lipozom teknolojisi |
 | `blog.html` | Blog listesi |

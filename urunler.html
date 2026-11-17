@@ -168,335 +168,864 @@ a:focus-visible,button:focus-visible{outline:3px solid #FF6A4D;outline-offset:4p
 <div style="max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
 <div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
 <h2 id="katalog-baslik" style="margin: 0; font-weight: 600; font-size: clamp(2.4rem, 4.6vw, 4.6rem); line-height: 1; letter-spacing: -0.045em">Katalog</h2>
-<p role="status" data-count style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #5A5A60">25 ÜRÜN</p>
+<p role="status" data-count style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #5A5A60">69 ÜRÜN</p>
 </div>
 <div role="group" aria-label="Seriye göre filtrele" style="display: flex; flex-wrap: wrap; gap: 10px">
 
 <button type="button" class="chip" data-cat="Tümü" aria-pressed="true" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #1E1E22; background: #1E1E22; color: #ECEAE7; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Tümü</button>
 
-<button type="button" class="chip" data-cat="Yoğun Bakım" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Yoğun Bakım</button>
+<button type="button" class="chip" data-cat="Mezoterapi" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Mezoterapi</button>
 
-<button type="button" class="chip" data-cat="Eksozom" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Eksozom</button>
+<button type="button" class="chip" data-cat="Serumlar" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Serumlar</button>
 
-<button type="button" class="chip" data-cat="Lipozomal Booster" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Lipozomal Booster</button>
+<button type="button" class="chip" data-cat="Nemlendiriciler" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Nemlendiriciler</button>
 
-<button type="button" class="chip" data-cat="Peeling" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Peeling</button>
+<button type="button" class="chip" data-cat="Temizleyiciler" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Temizleyiciler</button>
 
-<button type="button" class="chip" data-cat="Renkli Bakım" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Renkli Bakım</button>
+<button type="button" class="chip" data-cat="Peelingler" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Peelingler</button>
 
-<button type="button" class="chip" data-cat="Güneş" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Güneş</button>
+<button type="button" class="chip" data-cat="Güneş Ürünleri" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Güneş Ürünleri</button>
+
+<button type="button" class="chip" data-cat="Vücut Bakımı" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Vücut Bakımı</button>
 
 <button type="button" class="chip" data-cat="Göz Bakımı" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Göz Bakımı</button>
-
-<button type="button" class="chip" data-cat="Vücut" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Vücut</button>
-
-<button type="button" class="chip" data-cat="Onarım" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Onarım</button>
 
 <button type="button" class="chip" data-cat="Maskeler" aria-pressed="false" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid rgba(30,30,34,.25); background: transparent; color: #1E1E22; font: inherit; font-size: 14px; font-weight: 500; cursor: pointer">Maskeler</button>
 
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px">
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Yoğun Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.00s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.00s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/exoyouth-box.webp" alt="Exoyouth Lifting Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exoyouth Lifting Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildin sıkılık ve elastikiyet görünümünü destekleyerek ince çizgi, kırışıklık ve sarkma görünümünün azalmasına yardımcı olur.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.04s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/exoglow-box.webp" alt="Exoglow Vitamin Fusion Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exoglow Vitamin Fusion Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Matlık, nem kaybı, ton eşitsizliği ve leke görünümüne yönelik geliştirilen Meadow Glow Vitamin Fusion Complex, ProliCell® Meadow Glow desteğiyle…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.08s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/exobiom-box.webp" alt="Exobiom Repair Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exobiom Repair Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Prolicell Centella, EGF, hyalüronik asit, Physiogenyl, betain, allantoin, panthenol, C ve E vitaminleri ile zenginleştirilen bu yoğun bakım…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.12s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/hiq-box.webp" alt="H-IQ Biotechnology" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">H-IQ Biotechnology</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Hücresel düzeyde ileri yaşlanma belirtileri ve nem kaybını hedeflemek üzere geliştirilen H-IQ Biotechnology, yüksek performanslı hyaluronik asidi…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.16s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-hair-cocktail-complex.webp" alt="Hair Cocktail Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hair Cocktail Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu gelişmiş formül, aktif olmayan saç hücrelerini uyarır ve saç incelmesi ve saç dökülmesi durumlarında etkili bir bakım çözümü sunar.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.20s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-acne-complex.webp" alt="Acne Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Acne Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Yağlı, akneye eğilimli ve problemli ciltler için özel olarak geliştirilen Acne Complex, cildin nem dengesini sağlayarak, cildin sebum dengesinin…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.24s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/hyaluronic-box.webp" alt="Hyaluronic Acid Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hyaluronic Acid Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gözenek görünümünü sıkılaştırmak, hasar görmüş cilt dokusunu desteklemek ve yoğun nem sağlamak üzere tasarlanan bu gelişmiş kompleks; optimal nem…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.28s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/firming-box.webp" alt="Firming Anti-Aging DNA Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Firming Anti-Aging DNA Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Klinik olarak geliştirilmiş yeni nesil kırışık karşıtı yüksek performanslı kompleks, cildin elastikiyet kaybını azaltarak daha genç bir görünüm…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Mezoterapi" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.32s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/melanin-box.webp" alt="Melanin Plus Cocktail Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MEZOTERAPİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Melanin Plus Cocktail Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilt katmanları içindeki melanosit hücrelerini destekleyerek pigmentasyon sorunlarının temel nedenini hedef alır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.36s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: #DADAD8; display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/nad-serum.webp" alt="NAD+ Peptide Serum" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
+<img class="pimg" src="assets/nad-serum.webp" alt="NAD+ Peptide Boosting Concentrate Serum" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">YOĞUN BAKIM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">NAD+ Peptide Serum</h3><span style="font-size: 13px; color: #5A5A60">Boosting Concentrate · 30 ml</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">NAD+ Peptide Boosting Concentrate Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">NAD+, güçlü peptit kompleksi ve bariyer destekleyici aktifleri bir araya getirerek yaşlanma belirtilerine karşı çok yönlü bakım sunar.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Yoğun Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.04s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.40s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/nad-cream.webp" alt="NAD+ Peptide Cream" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-vital-shot-100-300.webp" alt="Vital Shot ( 100 &amp; 300 )" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">YOĞUN BAKIM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">NAD+ Peptide Cream</h3><span style="font-size: 13px; color: #5A5A60">Lifting etkili yoğun bakım · 50 ml</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Vital Shot ( 100 &amp; 300 )</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilt emilimini artırmak ve aktif bileşenlerin daha derinlemesine iletilmesini desteklemek amacıyla tasarlanan Vital Shot 100 &amp; 300, gelişmiş CICA…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Yoğun Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.08s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.44s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-vitamin-c-hexapeptide-serum.webp" alt="Vitamin C Hexapeptide Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Vitamin C Hexapeptide Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu ileri düzey Vitamin C Hexapeptide Serum, cildi canlandırmak, dengelemek ve korumak için uzman şekilde formüle edilmiştir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.48s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-intense-c-glow-booster-serum.webp" alt="Intense C Glow Booster Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Intense C Glow Booster Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Krem dokulu bu C vitamini serumu, tüm cilt tiplerine uygun şekilde uzman formüllendirilmiştir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.52s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-hair-cocktail-complex-serum.webp" alt="Hair Cocktail Complex Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hair Cocktail Complex Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Hair Cocktail Complex Serum, aktif olmayan saç hücrelerini uyarır ve saç incelmesi ve saç dökülmesi durumlarında etkili bir bakım çözümü sunar.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.56s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-melanin-plus-cocktail-complex-serum.webp" alt="Melanin Plus Cocktail Complex Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Melanin Plus Cocktail Complex Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilde pigment dengesini yeniden kazandırmayı amaçlayan gelişmiş bir aydınlatıcı bakımdır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.60s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-dna-complex-serum.webp" alt="DNA Complex Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">DNA Complex Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gelişmiş nesil bir bakım ürünü olan bu serum, yaşlanan cildi gözle görülür şekilde sıkılaştırmak, pürüzsüzleştirmek ve canlandırmak için formüle…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.64s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-acne-complex-serum.webp" alt="Acne Complex Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Acne Complex Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Yağlı, akneye meyilli ve problemli ciltler için özel olarak formüle edilmiştir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Serumlar" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.68s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-hyaluronic-acid-complex-serum.webp" alt="Hyaluronic Acid Complex Serum" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">SERUMLAR</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hyaluronic Acid Complex Serum</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilt gözeneklerini sıkılaştırmak, hasar görmüş cildi onarmak ve canlandırmak için özenle formüle edilmiş bu serum, cildin ideal nem dengesini yeniden…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.72s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/nad-cream.webp" alt="NAD+ Peptide Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">NAD+ Peptide Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">PLAYSKIN NAD+ Peptide Cream, cildin yaşlanma belirtilerine karşı bakımını desteklemek ve daha güçlü, canlı ve pürüzsüz bir görünüm kazandırmaya…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.76s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-acn-biom-cream.webp" alt="ACN Biom Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">ACN Biom Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Lipozomal taşıyıcı sistem ile güçlendirilmiş bu akne karşıtı formül, cildin yağ dengesini düzenlerken mikrobiyotasını destekler.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.80s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/hya-biom.webp" alt="HYA Biom Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">HYA Biom Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Yoğun nem, güçlü bariyer ve biyoteknolojik onarım etkisini tek adımda sunar.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.84s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: #D8B9AC; display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/hydrogel-cream.webp" alt="Hydrogel Resilience Cream" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
+<img class="pimg" src="assets/hydrogel-cream.webp" alt="Hydrogel Resilience Cream" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">YOĞUN BAKIM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hydrogel Resilience Cream</h3><span style="font-size: 13px; color: #5A5A60">50 ml</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hydrogel Resilience Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilt direncini ve uzun süreli nemlendirmeyi geri kazandırmak için formüle edilen Hydrogel Resilience Cream, elastikiyeti, pürüzsüzlüğü ve genel cilt…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Yoğun Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.12s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.88s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/hiq-box.webp" alt="H-IQ Biotechnology" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-melanin-plus-cream.webp" alt="Melanin Plus Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">YOĞUN BAKIM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">H-IQ Biotechnology</h3><span style="font-size: 13px; color: #5A5A60">Hyalüronik asit serum</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Melanin Plus Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu gelişmiş formülasyon, çevresel faktörlerin neden olduğu pigmentasyonu (lekelenmeyi) hafifletmeye yardımcı olurken, cilt tonunu eşitler ve…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Eksozom" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.16s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Nemlendiriciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.92s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/exobiom-box.webp" alt="Exobiom Repair Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/btx-mesolift.webp" alt="BTX Mesolift Moisturizing Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">EKSOZOM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">NEMLENDİRİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exobiom Repair Complex</h3><span style="font-size: 13px; color: #5A5A60">Eksozom ve lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">BTX Mesolift Moisturizing Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">BTX Mesolift Moisturizing Cream; Yeni nesil kırışık karşıtı bu ürün, cildin elastikiyet kaybını azaltarak daha genç bir görünüm kazanmasını sağlar.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Eksozom" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.20s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.00s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/exoglow-box.webp" alt="Exoglow Vitamin Fusion" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-rice-toner.webp" alt="Rice Toner" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">EKSOZOM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exoglow Vitamin Fusion</h3><span style="font-size: 13px; color: #5A5A60">Eksozom ve lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Rice Toner</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Yüksek oranda Icheon pirinç özü ile formüle edilen Rice Toner, cildi derinlemesine nemlendirirken daha aydınlık ve daha eşit bir cilt görünümünü…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Eksozom" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.24s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.04s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/exoyouth-box.webp" alt="Exoyouth Lifting Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-cleansing-balm.webp" alt="Cleansing Balm" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">EKSOZOM</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Exoyouth Lifting Complex</h3><span style="font-size: 13px; color: #5A5A60">Eksozom ve lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Cleansing Balm</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Yüz ve göz makyajını nazik ancak etkili şekilde temizlemek üzere tasarlanan bu besleyici temizleme balmı, ciltle temas ettiğinde eriyerek kirleri…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Lipozomal Booster" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.28s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.08s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/hyaluronic-box.webp" alt="Hyaluronic Acid Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-mesoclean-pink-cleansing-mist.webp" alt="Mesoclean Pink Cleansing Mist" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">LİPOZOMAL BOOSTER</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Hyaluronic Acid Complex</h3><span style="font-size: 13px; color: #5A5A60">Lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Mesoclean Pink Cleansing Mist</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Mesoclean Pink Cleansing Mist, en inatçı makyajı tek adımda temizlerken cildi ferahlatan ve aydınlatan yüksek performanslı bir temizleyicidir.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Lipozomal Booster" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.32s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.12s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/melanin-box.webp" alt="Melanin Plus Cocktail Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-mesoclean-micellar-water.webp" alt="Mesoclean Micellar Water" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">LİPOZOMAL BOOSTER</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Melanin Plus Cocktail Complex</h3><span style="font-size: 13px; color: #5A5A60">Lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Mesoclean Micellar Water</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Günlük cilt temizliğini destekleyen Mesoclean Micellar Water; cildi derinlemesine temizlemeye, makyaj kalıntılarından arındırmaya ve tonik etkisiyle…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Lipozomal Booster" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.36s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.16s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/firming-box.webp" alt="Firming Anti-Aging DNA Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-silky-foaming-moisturising-cleanser.webp" alt="Silky Foaming Moisturising Cleanser" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">LİPOZOMAL BOOSTER</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Firming Anti-Aging DNA Complex</h3><span style="font-size: 13px; color: #5A5A60">Lipozom teknolojisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Silky Foaming Moisturising Cleanser</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Silky Foaming Cleanser, cildi derinlemesine temizlerken serbest radikallere karşı koruma sağlayan lüks ve ipeksi bir köpük sunar.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Lipozomal Booster" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.40s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.20s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/hya-biom.webp" alt="HYA BIOM Cream" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-mesoclean-oil-to-milk-cleanser.webp" alt="Mesoclean Oil to Milk Cleanser" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">LİPOZOMAL BOOSTER</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">HYA BIOM Cream</h3><span style="font-size: 13px; color: #5A5A60">Hyaluronic Acid serisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Mesoclean Oil to Milk Cleanser</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu oksijen destekli arındırıcı bakım, mat ve yorgun görünen cildi canlandırmak için nem ve arınmayı lüks bir dokuda bir araya getirir.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Lipozomal Booster" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.44s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.24s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/btx-mesolift.webp" alt="BTX Mesolift Cream" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-mesoclean-oxy-cleanser.webp" alt="Mesoclean Oxy Cleanser" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">LİPOZOMAL BOOSTER</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">BTX Mesolift Cream</h3><span style="font-size: 13px; color: #5A5A60">Firming Anti-Aging DNA serisi</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Mesoclean Oxy Cleanser</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Mesoclean Oxy Cleanser, cilt için gerekli oksijeni sağlayarak, cildin solunumunu destekler ve yorgun, mat görünen cildi canlandırır.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Peeling" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.48s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Temizleyiciler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.28s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/gold-peel.webp" alt="Gold Peel" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-mesoclean-foaming-cleanser.webp" alt="Mesoclean Foaming Cleanser" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNG</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">TEMİZLEYİCİLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Gold Peel</h3><span style="font-size: 13px; color: #5A5A60">Peel Series · 200 ml</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Mesoclean Foaming Cleanser</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Salisilik asit ve çay ağacı yağı ile formüle edilen bu derinlemesine temizleyici köpük, cildi etkili biçimde arındırarak kirleri ve ölü deri…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Peeling" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.52s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/ocean-peel.webp" alt="Ocean Peel · Sensitive Peel" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNG</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Ocean Peel · Sensitive Peel</h3><span style="font-size: 13px; color: #5A5A60">Peel Series</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Peeling" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.56s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Peelingler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.32s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: #8E1420; display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/aha-bha.webp" alt="AHA BHA Red Peel Booster" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
+<img class="pimg" src="assets/aha-bha.webp" alt="AHA BHA Red Peel Booster" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNG</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNGLER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">AHA BHA Red Peel Booster</h3><span style="font-size: 13px; color: #5A5A60">Red Peel Booster</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">AHA BHA Red Peel Booster</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">AHA ve BHA asit karışımı ile zenginleştirilmiş bu güçlü cilt yenileyici serum, ölü deri hücrelerini nazikçe eksfoliye ederken sebum seviyelerini…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Göz Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.60s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Peelingler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.36s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/eye-complex.webp" alt="Liposomal Eye Complex" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-ocean-peel.webp" alt="Ocean Peel" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNGLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Ocean Peel</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Ocean Peel, yağlı ve akneye meyilli ciltlerde berraklık ve dengeyi yeniden kazandırmak için tasarlanmış arındırıcı bir eksfoliasyon bakımıdır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Peelingler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.40s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/gold-peel.webp" alt="Gold Peel" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNGLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Gold Peel</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gold Peel, ışıltılı ve eşit tonlu bir cilt ortaya çıkarmak için tasarlanmış sofistike bir cilt yenileme bakımıdır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Peelingler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.44s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-sensitive-peel.webp" alt="Sensitive Peel" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">PEELİNGLER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sensitive Peel</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Sensitive Peel, en hassas ciltler için özenle geliştirilmiş bir cilt yenileyici bakımdır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Güneş Ürünleri" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.48s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FBF0EC, #EADAD3 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/cc-cream.webp" alt="CC Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ ÜRÜNLERİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">CC Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">PLAYSKIN CC Cream, lipozom teknolojisiyle desteklenen formülü sayesinde cilt tonunu eşitlemeye, kusur görünümünü azaltmaya ve cilde daha aydınlık bir…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Güneş Ürünleri" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.52s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/glow-cushion.webp" alt="BB Cushion" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ ÜRÜNLERİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">BB Cushion</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Glow Cushion BB, cilt tonunu eşitleyen, doğal ve ışıltılı bir bitiş sağlayan hafif ama yüksek kapatıcılığa sahip bir cushion fondötendir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Güneş Ürünleri" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.56s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/cica-shield.webp" alt="Sun Stick – Cica Shield" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ ÜRÜNLERİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sun Stick – Cica Shield</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Geniş spektrumlu UV filtreleri ve yatıştırıcı bitkisel aktiflerle zenginleştirilmiş bu güneş stick’i, cilde hafif ve konforlu bir his kazandırırken…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Güneş Ürünleri" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.60s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/bb-cream.webp" alt="BB Cream" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ ÜRÜNLERİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">BB Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gelişmiş liposom teknolojisi ile zenginleştirilmiş bu BB krem, tüm cilt tipleri için uygun olup cilt tonunu zahmetsizce eşitlerken kusursuz ve doğal…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Güneş Ürünleri" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.64s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/sun-block.webp" alt="Playskin Sun Block" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ ÜRÜNLERİ</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Playskin Sun Block</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu ileri düzey, yüksek korumalı güneş kremi, cildinizi zararlı UV ışınlarından korurken ekranlardan ve iç mekan aydınlatmalarından yayılan mavi ışığa…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Vücut Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.68s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: #D9B8A5; display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/derma-calm.webp" alt="Derma Calm Recovery Cream" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT BAKIMI</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Derma Calm Recovery Cream</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Lazer ve benzeri uygulamalar sonrasında hassaslaşan cildi yatıştırmaya, kızarıklık ve gerginlik hissini azaltmaya yardımcı olan bakım kremidir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Vücut Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.72s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/body-glow-mist.webp" alt="After Sun Body Glow Mist" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT BAKIMI</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">After Sun Body Glow Mist</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cilde radyant bir ışıltı veren bu aydınlatıcı sprey ile vücut bakımı ritüelinizi zenginleştirin.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Vücut Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.76s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-body-shimmer-lotion.webp" alt="Body Shimmer Lotion" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT BAKIMI</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Body Shimmer Lotion</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu losyon, zararlı UV ışınlarına karşı güçlü geniş spektrumlu SPF 50 koruması sağlamakla kalmaz, aynı zamanda cildi besler ve doğal parlaklığını…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Vücut Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.80s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-sun-tan-glowy-body-oil.webp" alt="Sun Tan Glowy Body Oil" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT BAKIMI</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sun Tan Glowy Body Oil</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildi derinlemesine beslemek ve ışıltılı bir görünüm kazandırmak üzere formüle edilen bu lüks yağ, cildin nemini ve parlaklığını artırmak için en…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Vücut Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.84s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-sun-tan-velvet-oil.webp" alt="Sun Tan Velvet Oil" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT BAKIMI</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sun Tan Velvet Oil</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildi derinlemesine beslemek ve ışıltılı bir görünüm kazandırmak üzere formüle edilen bu lüks yağ, cildin nemini ve parlaklığını artırmak için en…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Göz Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.88s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-eye-corrector-anti-wrinkle-dark-circles.webp" alt="Eye Corrector (Anti-Wrinkle + Dark Circles)" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
 <span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÖZ BAKIMI</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Liposomal Eye Complex</h3><span style="font-size: 13px; color: #5A5A60">Liposomal Technology</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Eye Corrector (Anti-Wrinkle + Dark Circles)</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Hassas göz çevresi için özel olarak geliştirilen bu yüksek performanslı formül, çift etkili bir çözüm sunar: Göz altı morluklarını ve şişkinliğini…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Güneş" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.64s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Göz Bakımı" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.92s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/sun-block.webp" alt="Sun Block" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/eye-complex.webp" alt="Liposomal Eye Complex" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ</span>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÖZ BAKIMI</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sun Block</h3><span style="font-size: 13px; color: #5A5A60">Blue Light Filter · SPF 50</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Liposomal Eye Complex</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Liposomal Eye Complex’in dönüştürücü gücüyle gözle görülür şekilde tazelenmiş, genç bakışları deneyimleyin.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Güneş" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.68s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.00s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/cica-shield.webp" alt="Cica Shield Sun Stick" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">GÜNEŞ</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Cica Shield Sun Stick</h3><span style="font-size: 13px; color: #5A5A60">Liposomal Technology</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Renkli Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.72s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FBF0EC, #EADAD3 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/cc-cream.webp" alt="CC Cream" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">RENKLİ BAKIM</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">CC Cream</h3><span style="font-size: 13px; color: #5A5A60">Color Correcting · 40 ml · SPF 40</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Renkli Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.76s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/bb-cream.webp" alt="BB Cream" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">RENKLİ BAKIM</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">BB Cream</h3><span style="font-size: 13px; color: #5A5A60">100 ml · SPF 50</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Renkli Bakım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.80s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/glow-cushion.webp" alt="Glow Cushion BB" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">RENKLİ BAKIM</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Glow Cushion BB</h3><span style="font-size: 13px; color: #5A5A60">Glow Cushion Blemish Balm · 17 gr</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Vücut" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.84s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/body-glow-mist.webp" alt="After Sun Body Glow Mist" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">VÜCUT</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">After Sun Body Glow Mist</h3><span style="font-size: 13px; color: #5A5A60">200 ml</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Onarım" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.88s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: #D9B8A5; display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/derma-calm.webp" alt="Derma Calm Recovery Cream" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: normal">
-<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
-<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">ONARIM</span>
-</div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Derma Calm Recovery Cream</h3><span style="font-size: 13px; color: #5A5A60">İşlem sonrası bakım</span></div>
-<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
-</div>
-</a>
-
-<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.92s">
-<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/sheet-mask.webp" alt="Sheet Mask" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-premium-modeling-mask-gold.webp" alt="Premium Modeling Mask – Gold" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
 <span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Sheet Mask</h3><span style="font-size: 13px; color: #5A5A60">Kağıt maskeler</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Gold</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Maskedeki altın bileşenleri, radyant ve daha aydınlık bir cilt görünümünü destekler.</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
-<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.96s">
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.04s">
 <div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
-<img class="pimg" src="assets/modeling-mask.webp" alt="Premium Modeling Mask" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<img class="pimg" src="assets/p-premium-modeling-mask-lavender.webp" alt="Premium Modeling Mask – Lavender" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
 <div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
 <span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
 </div>
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px">
-<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask</h3><span style="font-size: 13px; color: #5A5A60">Soyulabilir maske · 1 kg</span></div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Lavender</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Lavanta esansiyel yağı, ciltte rahatlamayı ve dengeli sebum üretimini destekleyerek tahriş olmuş ve stresli cildi yatıştırmak için ideal bir çözüm…</span></div>
 <span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
 </div>
 </a>
 
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.08s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-cool-tea-tree.webp" alt="Premium Modeling Mask – Cool Tea Tree" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Cool Tea Tree</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Çay ağacı özü içeren bu ferahlatıcı maske, cildi arındırmaya ve fazla sebumu azaltmaya yardımcı olur; yağlı ve akneye meyilli ciltler için…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.12s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-cacao.webp" alt="Premium Modeling Mask – Cacao" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Cacao</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Kakao polifenolleri ile zenginleştirilen bu antioksidan deposu maske, cildi çevresel streslerden korurken canlı ve canlanmış bir görünüm kazandırır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.16s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-charcoal.webp" alt="Premium Modeling Mask – Charcoal" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Charcoal</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Aktif kömür ve kil mineralleri içeren bu detoks etkili maske, gözeneklerin temizlenmesine ve fazla yağın emilmesine yardımcı olarak cildi daha berrak…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.20s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-collagen.webp" alt="Premium Modeling Mask – Collagen" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Collagen</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Hidrolize kolajen ile güçlendirilen bu maske, dış stres faktörlerine karşı koruyucu bir bariyer oluştururken cilt elastikiyetini ve sıkılığını…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.24s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-pearl.webp" alt="Premium Modeling Mask – Pearl" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Pearl</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Formulated with 20 kinds of amino acids, this mask promotes a natural glow, supports protein synthesis, and enhances skin brightness.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.28s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-spirulina.webp" alt="Premium Modeling Mask – Spirulina" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Spirulina</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gücünü deniz spirulina özünden alan bu derinlemesine nemlendirici maske, cilt elastikiyetini ve parlaklığını artırır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.32s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-premium-modeling-mask-vitamin.webp" alt="Premium Modeling Mask – Vitamin" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Premium Modeling Mask – Vitamin</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">C vitamini açısından zengin olan bu maske, mat cildi canlandırır, ışıltıyı artırır, kolajen üretimini desteklerken daha parlak ve eşit bir cilt tonu…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.36s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-rose-petal-gel-mask.webp" alt="Rose Petal Gel Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Rose Petal Gel Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">The mask, containing rose, helps moisturize and soothe dry and sensitive skin.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.40s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-calendula-petal-gel-mask.webp" alt="Calendula Petal Gel Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Calendula Petal Gel Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Soothing and anti-inflammatory, this mask is ideal for sensitive and irritated skin.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.44s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-crystal-aqua-powder.webp" alt="Crystal Aqua Powder" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Crystal Aqua Powder</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu ultra nemlendirici maske, nemi geri kazandırmak ve cildi yatıştırmak için Sodyum Hyaluronat, Seramid NP ve Aloe Vera içerir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.48s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-crystal-black-pearl-powder.webp" alt="Crystal Black Pearl Powder" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Crystal Black Pearl Powder</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Volkanik kül, kaolin, kömür ve inci özü ile zenginleştirilen bu maske, cilt tonunu ve dokusunun görünümünü düzenlerken cilt yüzeyini arındırır ve…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.52s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-crystal-gold-powder.webp" alt="Crystal Gold Powder" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Crystal Gold Powder</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Gerçek altın parçacıkları ve Ginseng ile Osmanthus gibi botanik özlerle formüle edilen bu lüks maske, cildi aydınlatır ve yaşlanma belirtilerini…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.56s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-crystal-seaweed-powder.webp" alt="Crystal Seaweed Powder" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Crystal Seaweed Powder</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Spirulina, Deniz Tuzu ve Chlorella Vulgaris gibi deniz hazineleriyle zenginleştirilen bu maske, derinlemesine nemlendirme sağlarken kolajen üretimini…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.60s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-promax-thermage-lifting.webp" alt="Promax Thermage Lifting" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Promax Thermage Lifting</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildinizi lifting ve sıkılaştırma etkisiyle destekler.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.64s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-recovery-sheet-mask.webp" alt="Recovery Sheet Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Recovery Sheet Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Stresli veya hasar görmüş ciltler için özel olarak geliştirilmiştir.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.68s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-lactobionic-multi-enzyme-sheet-mask.webp" alt="Lactobionic Multi Enzyme Sheet Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Lactobionic Multi Enzyme Sheet Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Bu eksfoliye edici formül, laktobiyonik asit ve nazik enzim karışımını bir araya getirerek cilt dokusunun görünümünü düzeltmeye, cildin yenilenmesini…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.72s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-ecto-calming-sheet-mask.webp" alt="Ecto Calming Sheet Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Ecto Calming Sheet Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildi nemlendirir ve yatıştırırken, besleyici özelliğiyle doğal dengesini geri kazandırır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.76s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-balancing-sheet-mask.webp" alt="Balancing Sheet Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Balancing Sheet Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">Cildi besleyip doğal dengesini geri kazandırırken aynı zamanda nemlendirir ve yatıştırır.</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+<a href="urun.html" class="ps2-tilt gi" data-series="Maskeler" style="display: flex; flex-direction: column; gap: 18px; padding: 12px 12px 22px; border-radius: 28px; background: #F6F5F3; text-decoration: none; color: #1E1E22; animation-delay: 0.80s">
+<div style="position: relative; height: 300px; border-radius: 20px; overflow: hidden; background: radial-gradient(circle at 50% 42%, #FFFFFF, #E7E5E2 72%); display: flex; align-items: center; justify-content: center">
+<img class="pimg" src="assets/p-early-booster-vitamin-brightening-niacinamide-2-sheet-mask.webp" alt="Early Booster Vitamin Brightening (Niacinamide 2%) Sheet Mask" loading="lazy" style="width: 78%; height: 78%; object-fit: contain; mix-blend-mode: multiply">
+<div aria-hidden="true" class="shine" style="position: absolute; inset: 0"></div>
+<span style="position: absolute; left: 14px; top: 14px; padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.88); font-size: 11px; font-weight: 600; letter-spacing: .1em">MASKELER</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 0 8px; flex: 1">
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.02em">Early Booster Vitamin Brightening (Niacinamide 2%) Sheet Mask</h3><span style="font-size: 13px; line-height: 1.5; color: #5A5A60; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">%2 Niasinamid ile formüle edilen bu maske, matlığı ve cilt tonu eşitsizliğini hedef alır; cildi güçlü bir vitamin kompleksiyle beslerken radyant ve…</span></div>
+<span aria-hidden="true" class="parr" style="flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #1E1E22"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+
+</div>
+<div data-more-wrap style="display: flex; justify-content: center; padding-top: 20px">
+<button type="button" data-more class="btn ps2-mag" style="display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 32px; border-radius: 999px; border: 0; background: #1E1E22; color: #ECEAE7; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer"><span data-more-label>Daha fazla göster</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></button>
 </div>
 </div>
 </section>

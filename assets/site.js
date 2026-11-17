@@ -39,8 +39,12 @@
   if (chips.length) {
     var cards = qa('[data-series]');
     var count = q('[data-count]');
-    var pick = function (cat) {
-      var n = 0;
+    var moreBtn = q('[data-more]'), moreWrap = q('[data-more-wrap]'), moreLabel = q('[data-more-label]');
+    var STEP = 24, limit = STEP, current = 'Tümü';
+    var pick = function (cat, keepLimit) {
+      if (!keepLimit) limit = STEP;
+      current = cat;
+      var n = 0, shown = 0;
       chips.forEach(function (c) {
         var on = c.getAttribute('data-cat') === cat;
         c.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -49,17 +53,25 @@
         c.style.borderColor = on ? '#1E1E22' : 'rgba(30,30,34,.25)';
       });
       cards.forEach(function (card) {
-        var show = cat === 'Tümü' || card.getAttribute('data-series') === cat;
+        var match = cat === 'Tümü' || card.getAttribute('data-series') === cat;
+        var show = match && n < limit;
+        var wasHidden = card.hidden;
         card.hidden = !show;
-        if (show) {
-          card.style.animationDelay = (n * 0.04).toFixed(2) + 's';
+        if (show && (!keepLimit || wasHidden)) {
+          card.style.animationDelay = ((shown % STEP) * 0.04).toFixed(2) + 's';
           card.classList.remove('gi'); void card.offsetWidth; card.classList.add('gi');
-          n++;
         }
+        if (show) shown++;
+        if (match) n++;
       });
       if (count) count.textContent = n + ' ÜRÜN';
+      var rest = n - shown;
+      if (moreWrap) moreWrap.hidden = rest <= 0;
+      if (moreLabel) moreLabel.textContent = 'Daha fazla göster · ' + rest + ' ürün daha';
     };
     chips.forEach(function (c) { c.addEventListener('click', function () { pick(c.getAttribute('data-cat')); }); });
+    if (moreBtn) moreBtn.addEventListener('click', function () { limit += STEP; pick(current, true); });
+    pick('Tümü');
   }
 
   /* ---------- Bileşen seçici (ürün detay) ---------- */
