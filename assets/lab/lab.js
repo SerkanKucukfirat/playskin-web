@@ -251,12 +251,13 @@ function base() {
   return {
     cam: [0, 0.9, 11.5], look: [0, 0.15, 0],
     bx: 0, by: 0, brot: -0.6, d0: 0, d1: 1, d2: 1, d3: 1, mode: [0, 1, 1, 1], sweep: 0, swOn: 0, spray: 0, floor: 1,
+    px: 17, py: 3, ps: 0.72, prot: -12, pvis: 1,
     dropPos: [0, 0, 0], dropS: [0.3, 0.3, 0.3], sph: 0.2, dropOn: 0, tint: C.serum, thick: 1,
     top: C.white, bot: C.silver, acc: C.pink, glow: 0.3, rays: 0, caustic: 0, dark: 0,
     pA: 0.7, pCol: C.pinkP, pSpeed: 1,
     surf: 0, rip: 0, cream: 0, mist: 0,
     // Lipozom her bölümde eşlik eder: lanch 1 = ekrana sabit küçük eşlikçi, 0 = sahnede (formül)
-    lipo: 1, build: 1, cut: 0, lanch: 1, lsp: isPhone ? [0.56, 0.64] : [-0.62, 0.5], ld: 6, lsc: isPhone ? 0.22 : 0.26, emis: [0, 0, 0]
+    lipo: 1, build: 1, cut: 1, lanch: 1, lsp: isPhone ? [0.56, 0.66] : [0.8, 0.6], ld: 6, lsc: isPhone ? 0.2 : 0.24, emis: [0, 0, 0]
   };
 }
 const companion = (P, desk, phone, size) => { P.lanch = 1; P.lsp = isPhone ? phone : desk; P.lsc = size * (isPhone ? 0.8 : 1); return P; };
@@ -269,6 +270,9 @@ function S1(p) {
   P.by = isPhone ? lerp(0.9, 0, a) : 0;
   P.brot = lerp(-0.6, 0, ease(seg(p, 0.04, 0.72)));
   P.spray = (0.45 + 0.55 * bell(p, 0.04, 0.3, 0.62)) * (1 - seg(p, 0.58, 0.7));
+  if (isPhone) { P.px = 0; P.py = lerp(-8, 9, a); P.ps = lerp(0.62, 1.55, a); }
+  else { P.px = lerp(17, 0, ease(seg(p, 0.04, 0.6))); P.py = lerp(3, 12, a); P.ps = lerp(0.72, 2.0, a); }
+  P.prot = lerp(-12, 0, ease(seg(p, 0.04, 0.72)));
   P.top = mixArr(C.white, C.pinkTop, a); P.bot = mixArr(C.silver, C.pinkBot, a);
   P.glow = 0.3 + 0.3 * a; P.pA = 0.55 + 0.3 * a;
   return P;
@@ -278,6 +282,8 @@ function S2(p) {
   P.cam = isPhone ? [0, 0.3, 9.4] : [0, 0.25, 6.8]; P.look = [0, isPhone ? 0.55 : 0.05, 0];
   P.bx = isPhone ? 0 : 1.2; P.by = isPhone ? 1.25 : 0;
   P.brot = Math.sin(p * Math.PI * 4) * 0.16;
+  P.prot = Math.sin(p * Math.PI * 4) * 5;
+  if (isPhone) { P.px = 0; P.py = -17; P.ps = 0.6; } else { P.px = 17; P.py = 2; P.ps = 0.95; }
   P.d0 = seg(p, 0.15, 0.23);
   P.d1 = Math.max(1 - seg(p, 0.235, 0.315), seg(p, 0.42, 0.5));
   P.d2 = Math.max(1 - seg(p, 0.505, 0.585), seg(p, 0.68, 0.76));
@@ -295,25 +301,17 @@ function S2(p) {
 }
 function CALM() {
   const P = base();
-  P.cam = [0, 0, 8]; P.look = [0, 0, 0]; P.by = 0; P.d0 = 1; P.floor = 0;
+  P.cam = [0, 0, 8]; P.look = [0, 0, 0]; P.by = 0; P.d0 = 1; P.floor = 0; P.pvis = 0; P.ps = 0.9; P.px = isPhone ? 0 : 17; P.py = isPhone ? -17 : 2; P.prot = 0;
   P.top = C.white; P.bot = hex('#E9E9EB'); P.acc = C.pink; P.glow = 0.18; P.pA = 0.2; P.pCol = hex('#E6C9D6'); P.pSpeed = 0.4;
   return companion(P, [-0.8, -0.62], [0.62, 0.7], 0.26);
 }
 function RUT() {
   return companion(CALM(), [0.8, 0.42], [0.62, 0.72], 0.34);
 }
-function S3(p) {
-  const P = CALM();
-  const z = ease(seg(p, 0.36, 0.86));
-  P.cam = [0, lerp(2.6, 1.6, z), lerp(5.6, 4.1, z)]; P.look = [0, lerp(-1.05, -1.3, z), 0];
-  const f = seg(p, 0.08, 0.36), i = seg(p, 0.36, 0.4);
-  P.dropPos = [0, lerp(0.95, -1.35, f * f), 0];
-  const s = 0.3;
-  P.dropS = [s * (1 + 0.9 * i), s * (1 + 0.25 * f) * (1 - 0.8 * i), s * (1 + 0.9 * i)];
-  P.sph = 0.12; P.thick = 0.5; P.dropOn = seg(p, 0.01, 0.07) * (1 - i); P.tint = C.serum;
-  P.surf = seg(p, 0, 0.1); P.rip = seg(p, 0.36, 0.64); P.cream = easeOut(seg(p, 0.44, 0.8)) * 0.62; P.mist = seg(p, 0.72, 1);
-  P.top = C.skinTop; P.bot = C.skinBot; P.acc = C.peach; P.glow = 0.3; P.pA = 0.2; P.pCol = hex('#F4C9B5');
-  return companion(P, [0.74, 0.5], [0.6, 0.66], 0.24);
+function S3() {
+  // Doku bölümü fotoğraflarla anlatılır; 3D sahne arkada sakin kalır
+  const P = CALM(); P.lipo = 0;
+  return P;
 }
 function S4(p) {
   const P = CALM();
@@ -321,10 +319,10 @@ function S4(p) {
   P.cam = [Math.sin(orbit) * 1.2, 0.35 * Math.cos(orbit * 1.3), 6.8 - 0.6 * ease(seg(p, 0.2, 0.7))];
   P.look = [isPhone ? 0 : 0.3, isPhone ? -0.5 : 0, 0];
   const s = lerp(0.3, 1.02, ease(seg(p, 0, 0.16)));
-  P.dropPos = [0, isPhone ? 0.4 : 0, 0]; P.dropS = [s, s, s]; P.sph = 1; P.thick = 1.4; P.tint = C.water; P.dropOn = 1;
-  P.lipo = 1; P.build = 1; P.cut = ease(seg(p, 0.16, 0.44));
-  P.lanch = 0; P.lsc = lerp(0.4, isPhone ? 0.72 : 1, ease(seg(p, 0, 0.2)));
-  P.top = C.white; P.bot = hex('#E1E4E9'); P.acc = C.blue; P.glow = 0.35; P.pA = 0.12; P.pCol = hex('#B9D3EE');
+  P.dropPos = [0, isPhone ? -0.2 : 0, 0]; P.dropS = [s, s, s]; P.dropOn = 0;
+  P.lipo = ease(seg(p, 0, 0.12)); P.build = 1; P.cut = 1;
+  P.lanch = 0; P.lsc = lerp(0.4, isPhone ? 0.52 : 1, ease(seg(p, 0, 0.2)));
+  P.top = hex('#F7F7F8'); P.bot = hex('#D9DADF'); P.acc = hex('#E9E3F2'); P.glow = 0.35; P.pA = 0.12; P.pCol = hex('#D6D8E2');
   return P;
 }
 function LEDP() {
@@ -337,12 +335,64 @@ function timeline(y) {
   let P = S1(clamp(prog('acilis', y)));
   P = blend(P, S2(clamp(prog('dunyalar', y))), enter('dunyalar', y));
   P = blend(P, CALM(), enter('kampanya', y));
-  P = blend(P, S3(clamp(prog('doku', y))), enter('doku', y));
+  P = blend(P, S3(), enter('doku', y));
   P = blend(P, S4(clamp(prog('formul', y))), enter('formul', y));
   P = blend(P, CALM(), enter('galeri', y));
   P = blend(P, RUT(), enter('rutin', y));
   P = blend(P, LEDP(), enter('led', y));
   return P;
+}
+
+/* ------------------------------------------------------------------ */
+/* Ürünler: net görsel katmanı (yansıma, gölge, parlama, tarama)       */
+/* ------------------------------------------------------------------ */
+const plEls = $$('.pl').map((el) => ({ el, body: $('.pl-body', el), refl: $('.pl-refl', el), line: $('.pl-line', el), sheen: $('.pl-sheen', el), last: '' }));
+const prodLayer = $('.prod-layer');
+const pinkImg = $('.pl[data-pl="0"] .pl-img');
+function updateProducts(P) {
+  if (!prodLayer) return;
+  const show = P.pvis > 0.01;
+  prodLayer.style.visibility = show ? '' : 'hidden';
+  if (!show) return;
+  prodLayer.style.opacity = P.pvis.toFixed(3);
+  const band = lerp(30 - P.prot * 2, lerp(-25, 125, P.sweep), P.swOn);
+  const tf = 'translate(-50%,-50%) translate(' + P.px.toFixed(2) + 'vw,' + P.py.toFixed(2) + 'vh) scale(' + P.ps.toFixed(4) + ') rotateY(' + P.prot.toFixed(2) + 'deg)';
+  [P.d0, P.d1, P.d2, P.d3].forEach((d, i) => {
+    const o = plEls[i]; if (!o) return;
+    const vis = d < 0.995;
+    o.el.style.visibility = vis ? '' : 'hidden';
+    if (!vis) return;
+    o.el.style.transform = tf;
+    const incoming = P.mode[i] > 0.5;
+    const cut = (d * 100).toFixed(2) + '%';
+    o.body.style.clipPath = d < 0.001 ? '' : (incoming ? 'inset(' + cut + ' 0 0 0)' : 'inset(0 0 ' + cut + ' 0)');
+    o.line.style.top = incoming ? cut : ((1 - d) * 100).toFixed(2) + '%';
+    o.line.style.opacity = d > 0.01 && d < 0.99 ? 1 : 0;
+    o.refl.style.opacity = (0.2 * (1 - d)).toFixed(3);
+    o.sheen.style.setProperty('--b', band.toFixed(1));
+    o.sheen.style.opacity = (0.55 + 0.45 * P.swOn).toFixed(2);
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Doku: fotoğraflar arasında geçiş, düşen damla, halka                */
+/* ------------------------------------------------------------------ */
+const dkFrames = $$('.dk-frame');
+const dkDrop = $('.dk-drop'), dkRing = $('.dk-ring');
+function updateDoku(y) {
+  if (!dkFrames.length) return;
+  const p = prog('doku', y);
+  if (p < -0.6 || p > 1.4) return;
+  const q = clamp(p);
+  const w = [1 - seg(q, 0.4, 0.48), seg(q, 0.4, 0.48) * (1 - seg(q, 0.7, 0.78)), seg(q, 0.7, 0.78)];
+  const z = [seg(q, 0, 0.48), seg(q, 0.4, 0.78), seg(q, 0.7, 1)];
+  dkFrames.forEach((el, i) => { el.style.opacity = w[i].toFixed(3); el.style.transform = 'scale(' + (1.08 - 0.08 * z[i]).toFixed(4) + ')'; });
+  const t = seg(q, 0.06, 0.3), imp = seg(q, 0.3, 0.335);
+  dkDrop.style.opacity = (seg(q, 0.02, 0.06) * (1 - imp)).toFixed(3);
+  dkDrop.style.transform = 'translate(-50%,' + lerp(-14, isPhone ? 52 : 58, t * t).toFixed(2) + 'vh) scale(' + (1 + 0.5 * imp).toFixed(3) + ',' + (1 - 0.55 * imp).toFixed(3) + ')';
+  const r = seg(q, 0.3, 0.52);
+  dkRing.style.opacity = (r > 0 && r < 1 ? (1 - r) : 0).toFixed(3);
+  dkRing.style.transform = 'translate(-50%,-50%) scale(' + (0.2 + r * 6).toFixed(3) + ', ' + (0.06 + r * 1.6).toFixed(3) + ')';
 }
 
 /* ------------------------------------------------------------------ */
@@ -371,7 +421,10 @@ function loop(now) {
   if (counterEl.textContent !== wi) counterEl.textContent = wi;
   if (galTrack) { const pg = clamp(prog('galeri', y)); galTrack.style.transform = 'translate3d(' + (-pg * galShift).toFixed(1) + 'px,0,0)'; }
   updateLed(y);
-  if (GL) GL.frame(timeline(y), now / 1000);
+  const P = timeline(y);
+  updateProducts(P);
+  updateDoku(y);
+  if (GL) GL.frame(P, now / 1000);
   requestAnimationFrame(loop);
 }
 requestAnimationFrame(loop);
@@ -438,85 +491,6 @@ async function initGL() {
   bg.renderOrder = -10;
   scene.add(bg);
 
-  /* Ürünler (ambalaj görseli birebir; silindire sarılı ya da düz) */
-  const loader = new THREE.TextureLoader();
-  const maxAniso = renderer.capabilities.getMaxAnisotropy();
-  const shelf = new THREE.Group();
-  scene.add(shelf);
-  function dissolveMat(tex, u, side) {
-    const mat = new THREE.MeshBasicMaterial({ map: tex, alphaTest: 0.5, toneMapped: false, side });
-    mat.onBeforeCompile = (sh) => {
-      sh.uniforms.uDis = u.uDis; sh.uniforms.uEdge = u.uEdge; sh.uniforms.uMode = u.uMode;
-      sh.fragmentShader = sh.fragmentShader
-        .replace('#include <common>', '#include <common>\nuniform float uDis, uMode; uniform vec3 uEdge;\n' + NOISE)
-        .replace('#include <alphatest_fragment>', `#include <alphatest_fragment>
-          float nD = mix(vMapUv.y, 1. - vMapUv.y, uMode) + (vnoise(vec2(vMapUv.x * 6., 0.)) - 0.5) * 0.025;
-          float kD = uDis * 1.12 - 0.06;
-          if (nD < kD) discard;
-          float eD = (1. - smoothstep(kD, kD + 0.035, nD)) * step(0.001, uDis) * step(uDis, 0.999);
-          diffuseColor.rgb = mix(diffuseColor.rgb, uEdge * 0.6 + 0.55, eD * 0.85);`);
-    };
-    return mat;
-  }
-  function makeBottle(url, aspect, height, edgeHex, flat) {
-    const tex = loader.load(url);
-    tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = maxAniso;
-    let geo;
-    if (flat) geo = new THREE.PlaneGeometry(height * aspect, height, 1, 1);
-    else {
-      const r = (height * aspect) / 2, m = 0.4;
-      geo = new THREE.CylinderGeometry(r, r, height, 128, 1, true, -(Math.PI / 2 + m), Math.PI + 2 * m);
-      const pos = geo.attributes.position, uv = geo.attributes.uv;
-      for (let i = 0; i < pos.count; i++) {
-        const th = clamp(Math.atan2(pos.getX(i), pos.getZ(i)), -Math.PI / 2, Math.PI / 2);
-        uv.setX(i, clamp(0.5 + 0.5 * Math.sin(th), 0.012, 0.988));
-      }
-    }
-    const u = { uDis: { value: 0 }, uMode: { value: 0 }, uEdge: { value: new THREE.Color(edgeHex) } };
-    const mesh = new THREE.Mesh(geo, dissolveMat(tex, u, THREE.FrontSide));
-    const mirror = new THREE.Mesh(geo, dissolveMat(tex, u, THREE.DoubleSide));
-    mirror.scale.y = -1; mirror.position.y = -height;
-    const sheenU = { map: { value: tex }, uBand: { value: 0.5 }, uK: { value: 1 }, uFlat: { value: flat ? 1 : 0 }, uSweep: { value: 0 }, uDis: u.uDis, uMode: u.uMode };
-    const sheen = new THREE.Mesh(geo, new THREE.ShaderMaterial({
-      uniforms: sheenU, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
-      vertexShader: `varying vec3 vN; varying vec2 vUv; void main(){ vUv = uv; vN = normalize(normalMatrix * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }`,
-      fragmentShader: `uniform sampler2D map; uniform float uBand, uK, uFlat, uSweep, uDis, uMode; varying vec3 vN; varying vec2 vUv;
-        void main(){ float a = texture2D(map, vUv).a; if (a < 0.5) discard;
-          if (mix(vUv.y, 1. - vUv.y, uMode) < uDis * 1.12 - 0.06 + 0.02) discard;
-          float x = vN.x + (vUv.x - 0.5) * 1.5 * uFlat;
-          float b = exp(-pow((x - uBand) * 6.5, 2.)) * (0.26 + uSweep * 0.3) + exp(-pow((x + 0.62) * 11., 2.)) * 0.12 * (1. - uFlat);
-          float rim = pow(1. - abs(vN.z), 3.) * 0.16 * (1. - uFlat);
-          gl_FragColor = vec4(vec3(b + rim) * uK, 1.); }`
-    }));
-    sheen.renderOrder = 2;
-    const g = new THREE.Group(); g.add(mesh, mirror, sheen); g.position.y = height / 2;
-    shelf.add(g);
-    return { g, u, sheenU, height };
-  }
-  const bottles = [
-    makeBottle('assets/lab/pink-mist.webp', 504 / 2048, 3.2, '#FF8CC0', false),
-    makeBottle('assets/lab/vitamin-c.webp', 636 / 1524, 2.5, '#FFB04A', true),
-    makeBottle('assets/lab/nad-serum.webp', 635 / 1456, 2.45, '#7FD3DE', true),
-    makeBottle('assets/lab/cc-cream.webp', 273 / 1367, 3.1, '#E9B79C', false)
-  ];
-
-  /* Parlak zemin: yansımayı yumuşatır, temas gölgesi verir */
-  const floorU = { uCol: { value: new THREE.Color() }, uFar: { value: new THREE.Color() }, uVis: { value: 1 } };
-  const floor = new THREE.Mesh(new THREE.PlaneGeometry(60, 60, 1, 1), new THREE.ShaderMaterial({
-    uniforms: floorU, transparent: true, depthWrite: false,
-    vertexShader: `varying vec2 vP; void main(){ vP = position.xy; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }`,
-    fragmentShader: `uniform vec3 uCol, uFar; uniform float uVis; varying vec2 vP;
-      void main(){ float r = length(vP * vec2(1., 1.5));
-        float a = mix(0.74, 0.93, smoothstep(0.7, 9., r)) * (1. - smoothstep(11., 26., r));
-        vec3 c = mix(uCol, uFar, smoothstep(1.5, 10., r));
-        c *= 1. - 0.12 * exp(-r * r * 1.6);
-        gl_FragColor = vec4(c, a * uVis);
-        #include <colorspace_fragment>
-      }`
-  }));
-  floor.rotation.x = -Math.PI / 2; floor.renderOrder = 1;
-  scene.add(floor);
-
   /* Pink Mist püskürmesi */
   const SN = isPhone ? 260 : 620;
   const sR = new Float32Array(SN * 4);
@@ -524,13 +498,13 @@ async function initGL() {
   const sGeo = new THREE.BufferGeometry();
   sGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(SN * 3), 3));
   sGeo.setAttribute('aR', new THREE.BufferAttribute(sR, 4));
-  const sprayU = { uTime: { value: 0 }, uAmt: { value: 0 }, uPR: { value: 1 }, uH: { value: 800 }, uNoz: { value: new THREE.Vector3(0, 1.39, 0.12) } };
+  const sprayU = { uTime: { value: 0 }, uAmt: { value: 0 }, uPR: { value: 1 }, uH: { value: 800 }, uNoz: { value: new THREE.Vector3(0, 0, 0) } };
   const spray = new THREE.Points(sGeo, new THREE.ShaderMaterial({
     uniforms: sprayU, transparent: true, depthWrite: false,
     vertexShader: `attribute vec4 aR; uniform float uTime, uAmt, uPR, uH; uniform vec3 uNoz; varying float vA; varying float vR;
       void main(){
         float t = fract(uTime * 0.42 * (0.7 + aR.x * 0.6) + aR.y);
-        vec3 dir = normalize(vec3(0.9, 0.28, 0.42));
+        vec3 dir = normalize(vec3(0.95, 0.3, 0.12));
         vec3 j = (aR.yzw * 2. - 1.);
         vec3 p = uNoz + dir * t * (2.4 + aR.z * 1.8) + j * t * t * 1.1 + vec3(0., -t * t * 0.45, 0.);
         vec4 mv = modelViewMatrix * vec4(p, 1.);
@@ -547,7 +521,7 @@ async function initGL() {
       }`
   }));
   spray.frustumCulled = false;
-  bottles[0].g.add(spray);
+  scene.add(spray);
 
   /* Doku / formül damlası */
   const N = 72, dropPts = [], spherePts = [];
@@ -662,15 +636,15 @@ async function initGL() {
   const clipPlane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 3);
   const R = 1.6;
   const fib = (n, r) => { const out = []; const g = Math.PI * (3 - Math.sqrt(5)); for (let i = 0; i < n; i++) { const y = 1 - (i / (n - 1)) * 2; const rr = Math.sqrt(1 - y * y); const th = g * i; out.push(new THREE.Vector3(Math.cos(th) * rr * r, y * r, Math.sin(th) * rr * r)); } return out; };
-  const outerN = isPhone ? 520 : 1150, innerN = isPhone ? 380 : 820;
+  const outerN = isPhone ? 420 : 860, innerN = isPhone ? 300 : 600;
   const heads = [...fib(outerN, R), ...fib(innerN, R - 0.44)];
-  const headMat = new THREE.MeshPhysicalMaterial({ color: 0xF3F1F4, metalness: 0.25, roughness: 0.22, clearcoat: 1, clippingPlanes: [clipPlane] });
-  const tailMat = new THREE.MeshStandardMaterial({ color: 0xC7CBD4, metalness: 0.4, roughness: 0.4, clippingPlanes: [clipPlane] });
+  const headMat = new THREE.MeshPhysicalMaterial({ color: 0xFBFAF8, metalness: 0.05, roughness: 0.2, clearcoat: 1, clearcoatRoughness: 0.08, sheen: 1, sheenColor: new THREE.Color('#FFE9F1'), sheenRoughness: 0.35, clippingPlanes: [clipPlane], clipShadows: true });
+  const tailMat = new THREE.MeshPhysicalMaterial({ color: 0xF1F2F5, metalness: 0.0, roughness: 0.25, clearcoat: 0.6, clippingPlanes: [clipPlane] });
   const buildU = { value: 0 };
   const addBuild = (mat) => { mat.onBeforeCompile = (sh) => { sh.uniforms.uBuild = buildU; sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nuniform float uBuild; attribute float aDelay;').replace('#include <begin_vertex>', '#include <begin_vertex>\ntransformed *= smoothstep(aDelay, aDelay + 0.25, uBuild);'); }; };
   addBuild(headMat); addBuild(tailMat);
-  const headGeo = new THREE.SphereGeometry(0.058, 12, 8);
-  const tailGeo = new THREE.CylinderGeometry(0.012, 0.012, 0.17, 5, 1); tailGeo.translate(0, -0.1, 0);
+  const headGeo = new THREE.SphereGeometry(0.074, 18, 12);
+  const tailGeo = new THREE.CylinderGeometry(0.008, 0.006, 0.22, 6, 1); tailGeo.translate(0, -0.13, 0);
   const headIM = new THREE.InstancedMesh(headGeo, headMat, heads.length);
   const tailIM = new THREE.InstancedMesh(tailGeo, tailMat, heads.length * 2);
   const delays = new Float32Array(heads.length), tDelays = new Float32Array(heads.length * 2);
@@ -686,6 +660,9 @@ async function initGL() {
   headGeo.setAttribute('aDelay', new THREE.InstancedBufferAttribute(delays, 1));
   tailGeo.setAttribute('aDelay', new THREE.InstancedBufferAttribute(tDelays, 1));
   lipo.add(headIM, tailIM);
+  // İnci çekirdek (dergideki lipozom kesiti gibi)
+  const core = new THREE.Mesh(new THREE.SphereGeometry(R * 0.5, 64, 48), new THREE.MeshPhysicalMaterial({ color: 0xFBFAF7, roughness: 0.18, clearcoat: 1, clearcoatRoughness: 0.06, sheen: 0.8, sheenColor: new THREE.Color('#FFEFF5'), sheenRoughness: 0.4 }));
+  lipo.add(core);
   const mkActives = (n, rMin, rMax, color, size) => {
     const a = new Float32Array(n * 3);
     for (let i = 0; i < n; i++) { const v = new THREE.Vector3().randomDirection().multiplyScalar(lerp(rMin, rMax, Math.cbrt(Math.random()))); a.set([v.x, v.y, v.z], i * 3); }
@@ -700,8 +677,8 @@ async function initGL() {
     })));
     return u;
   };
-  const actIn = mkActives(isPhone ? 90 : 180, 0.1, 0.92, '#5FB6FF', 0.06);
-  const actMid = mkActives(isPhone ? 120 : 260, R - 0.36, R - 0.1, '#FFA94D', 0.045);
+  const actIn = mkActives(isPhone ? 40 : 80, R * 0.52, R * 0.62, '#F6D7E4', 0.05);
+  const actMid = mkActives(isPhone ? 80 : 160, R - 0.36, R - 0.1, '#FFFFFF', 0.035);
   const anchors = [new THREE.Vector3(-R * 0.72, R * 0.66, 0.25), new THREE.Vector3(-0.15, -0.25, 0.2), new THREE.Vector3(R * 0.62, -R * 0.62, 0.3), new THREE.Vector3(R * 0.98, 0.2, 0)];
 
   const leaders = $('.leaders');
@@ -745,21 +722,19 @@ async function initGL() {
     col(P.top, bgU.uTop.value); col(P.bot, bgU.uBot.value); col(P.acc, bgU.uAcc.value);
     bgU.uGlow.value = P.glow; bgU.uRays.value = P.rays; bgU.uCaustic.value = P.caustic; bgU.uDark.value = P.dark; bgU.uTime.value = t;
 
-    const showShelf = P.floor > 0.01;
-    shelf.visible = showShelf; floor.visible = showShelf;
-    if (showShelf) {
-      shelf.position.set(P.bx, FLOOR_Y + P.by, 0);
-      shelf.rotation.y = P.brot;
-      floor.position.set(P.bx, FLOOR_Y + P.by + 0.001, 0);
-      col(mixArr(P.bot, P.top, 0.5), floorU.uCol.value); col(mixArr(P.bot, P.top, 0.42).map((v) => Math.min(1, v + 0.06)), floorU.uFar.value); floorU.uVis.value = P.floor;
-      const band = lerp(0.45 - P.brot * 0.9, lerp(-1.6, 1.6, P.sweep), P.swOn);
-      [P.d0, P.d1, P.d2, P.d3].forEach((d, i) => {
-        const b = bottles[i];
-        b.u.uDis.value = d; b.u.uMode.value = P.mode[i] > 0.5 ? 1 : 0; b.g.visible = d < 0.995;
-        b.sheenU.uBand.value = band; b.sheenU.uK.value = 1; b.sheenU.uSweep.value = P.swOn;
-      });
-      sprayU.uAmt.value = P.spray * idle + P.spray * 0.4 * (1 - idle); sprayU.uTime.value = t;
-      spray.visible = P.spray > 0.01 && P.d0 < 0.5;
+    // Mist püskürmesi: Pink Mist görselinin ağzına ekran koordinatıyla bağlanır
+    const e0 = camera.matrixWorld.elements;
+    vR.set(e0[0], e0[1], e0[2]); vU.set(e0[4], e0[5], e0[6]); vF.set(-e0[8], -e0[9], -e0[10]);
+    const tanH0 = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+    spray.visible = P.spray > 0.01 && P.pvis > 0.5 && P.d0 < 0.5 && !!pinkImg;
+    if (spray.visible) {
+      const r = pinkImg.getBoundingClientRect();
+      const nx = ((r.left + r.width * 0.5) / innerWidth) * 2 - 1, ny = -(((r.top + r.height * 0.075) / innerHeight) * 2 - 1);
+      const d = 5;
+      spray.position.copy(vF).addScaledVector(vR, nx * tanH0 * camera.aspect).addScaledVector(vU, ny * tanH0).multiplyScalar(d).add(camera.position);
+      spray.quaternion.copy(camera.quaternion);
+      spray.scale.setScalar(0.45 * P.ps * (isPhone ? 0.8 : 1));
+      sprayU.uAmt.value = P.spray * (reduce ? 0.4 : 1); sprayU.uTime.value = t;
     }
 
     const on = P.dropOn;
@@ -789,15 +764,16 @@ async function initGL() {
       lipo.position.copy(vW).lerp(vS, P.lanch);
       const breathe = 1 + 0.03 * Math.sin(t * 1.3) * idle;
       lipo.scale.setScalar(Math.max(0.001, P.lsc * P.lipo * breathe));
-      lipo.rotation.set(0.25 + t * 0.04 * idle * P.lanch, t * 0.16 * idle * P.lanch + scrollY * 0.0004, 0.1);
+      lipo.rotation.set(0.25, scrollY * 0.0003, 0.1 + t * 0.12 * idle * P.lanch);
       buildU.value = P.build * 1.3;
       if (P.cut > 0.002) {
-        vN.copy(camera.position).sub(lipo.position).normalize();
+        // Kesit kameraya hafif açıyla bakar: halka derinlikli görünür
+        vN.copy(camera.position).sub(lipo.position).normalize().applyAxisAngle(vU, 0.38).applyAxisAngle(vR, -0.16).normalize();
         clipPlane.normal.copy(vN).negate();
-        clipPlane.constant = vN.dot(lipo.position) + lerp(2.4, -0.1, P.cut) * lipo.scale.x;
+        clipPlane.constant = vN.dot(lipo.position) + lerp(2.4, 0.0, P.cut) * lipo.scale.x;
       } else { clipPlane.normal.set(0, 0, -1); clipPlane.constant = 1e5; }
       col(P.emis, headMat.emissive); col(P.emis.map((v) => v * 0.6), tailMat.emissive);
-      actIn.uA.value = 0.9 * P.cut; actMid.uA.value = 0.8 * P.build;
+      actIn.uA.value = 0.7 * P.cut; actMid.uA.value = 0.6 * P.build;
       actIn.uTime.value = t; actMid.uTime.value = t;
       lipo.updateMatrixWorld();
       if (P.lanch < 0.5) placeLabels();

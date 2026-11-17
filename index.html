@@ -22,6 +22,32 @@
 <body>
 
 <canvas id="gl" aria-hidden="true"></canvas>
+<div class="prod-layer" aria-hidden="true">
+  <figure class="pl" data-pl="0" style="--ar:504/2048;--h:1;--src:url(pink-mist.webp)">
+    <span class="pl-shadow"></span>
+    <img class="pl-refl" src="assets/lab/pink-mist.webp" alt="">
+    <span class="pl-body"><img class="pl-img" src="assets/lab/pink-mist.webp" alt=""><span class="pl-sheen"></span></span>
+    <span class="pl-line"></span>
+  </figure>
+  <figure class="pl" data-pl="1" style="--ar:698/1536;--h:.78;--src:url(vitamin-c.webp)">
+    <span class="pl-shadow"></span>
+    <img class="pl-refl" src="assets/lab/vitamin-c.webp" alt="">
+    <span class="pl-body"><img class="pl-img" src="assets/lab/vitamin-c.webp" alt=""><span class="pl-sheen"></span></span>
+    <span class="pl-line"></span>
+  </figure>
+  <figure class="pl" data-pl="2" style="--ar:810/1800;--h:.78;--src:url(nad-serum.webp)">
+    <span class="pl-shadow"></span>
+    <img class="pl-refl" src="assets/lab/nad-serum.webp" alt="">
+    <span class="pl-body"><img class="pl-img" src="assets/lab/nad-serum.webp" alt=""><span class="pl-sheen"></span></span>
+    <span class="pl-line"></span>
+  </figure>
+  <figure class="pl" data-pl="3" style="--ar:273/1367;--h:.97;--src:url(cc-cream.webp)">
+    <span class="pl-shadow"></span>
+    <img class="pl-refl" src="assets/lab/cc-cream.webp" alt="">
+    <span class="pl-body"><img class="pl-img" src="assets/lab/cc-cream.webp" alt=""><span class="pl-sheen"></span></span>
+    <span class="pl-line"></span>
+  </figure>
+</div>
 
 <header class="hdr">
   <a href="index.html" class="hdr-logo" aria-label="Playskin ana sayfa"><img src="assets/logo-light.png" alt="Playskin" width="1400" height="147"></a>
@@ -50,7 +76,6 @@
       <p class="tag tag-b">B3 · B5 · B6 · C · E<br><b>Vitamin Complex 5</b></p>
       <p class="tag tag-c">All in one vitamin cleanser · 100 ml</p>
     </div>
-    <img class="nogl-img" src="assets/lab/pink-mist.webp" alt="Mesoclean Pink Cleansing Mist" width="504" height="2048">
   </div>
 </section>
 
@@ -141,17 +166,25 @@
 
 <!-- 3. Dokuyu hisset -->
 <section id="doku" class="pin" style="--len: 380" aria-label="Dokuyu hisset">
-  <div class="stick">
+  <div class="stick doku-stick">
+    <div class="dk-frames">
+      <picture class="dk-frame"><source media="(max-width: 760px)" srcset="assets/lab/doku/doku-1-m.webp"><img src="assets/lab/doku/doku-1.webp" alt="Cilt katmanları üzerinde süzülen lipozom ve su damlacıkları" width="1672" height="941" loading="lazy"></picture>
+      <picture class="dk-frame"><source media="(max-width: 760px)" srcset="assets/lab/doku/doku-2-m.webp"><img src="assets/lab/doku/doku-2.webp" alt="Altın tonlu cilt yüzeyine ulaşan aktif kapsül" width="1672" height="941" loading="lazy"></picture>
+      <picture class="dk-frame"><source media="(max-width: 760px)" srcset="assets/lab/doku/doku-3-m.webp"><img src="assets/lab/doku/doku-3.webp" alt="Pembe cilt katmanlarına yayılan aktifler" width="1672" height="941" loading="lazy"></picture>
+    </div>
+    <span class="dk-drop" aria-hidden="true"></span>
+    <span class="dk-ring" aria-hidden="true"></span>
     <div class="ov sec-head" data-sec="doku" data-in="-1" data-out="2">
       <p class="eyebrow">03 · Doku</p>
       <h2 class="h2">Dokuyu hisset.</h2>
       <p class="small">Hızı sen belirle: kaydırdıkça damla düşer.</p>
     </div>
     <ol class="steps-cap">
-      <li class="ov" data-sec="doku" data-in="0.06" data-out="0.42"><span>01</span>Serum damlası düşer</li>
-      <li class="ov" data-sec="doku" data-in="0.42" data-out="0.72"><span>02</span>Krem cilde yayılır</li>
-      <li class="ov" data-sec="doku" data-in="0.72" data-out="2"><span>03</span>İnce mist buluta dönüşür</li>
+      <li class="ov" data-sec="doku" data-in="0.06" data-out="0.42"><span>01</span>Damla cilde düşer</li>
+      <li class="ov" data-sec="doku" data-in="0.42" data-out="0.72"><span>02</span>Lipozom yüzeye ulaşır</li>
+      <li class="ov" data-sec="doku" data-in="0.72" data-out="2"><span>03</span>Aktifler katmanlara yayılır</li>
     </ol>
+    <p class="dk-note">Temsili görseller</p>
   </div>
 </section>
 
