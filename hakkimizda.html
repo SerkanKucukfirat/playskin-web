@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hakkımızda · Playskin</title>
+<meta name="description" content="PLAYSKIN: lipozom ve eksozom teknolojileriyle geliştirilen profesyonel dermokozmetik bakım. Slimwell Group.">
+<meta property="og:title" content="Hakkımızda · Playskin">
+<meta property="og:description" content="PLAYSKIN: lipozom ve eksozom teknolojileriyle geliştirilen profesyonel dermokozmetik bakım. Slimwell Group.">
+<meta property="og:image" content="assets/cover-clean.webp">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&amp;display=swap">
+<style>
+[hidden]{display:none !important}
+body{margin:0;background:#ECEAE7;color:#1E1E22;font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #FF6A4D;outline-offset:4px}
+.mask{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .1em 0;margin-bottom:-.1em}
+.ch{display:inline-block;transform:translateY(115%);animation:ch-up 1.15s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes ch-up{from{transform:translateY(115%) rotate(8deg)}to{transform:none}}
+.fade-up{opacity:0;transform:translateY(24px);animation:fade-up 1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes fade-up{to{opacity:1;transform:none}}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;mix-blend-mode:difference;color:#ECEAE7;pointer-events:none}
+.hdr a,.hdr button{pointer-events:auto}
+.hl{position:relative;text-decoration:none}
+.hl::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:100% 50%;transition:transform .45s cubic-bezier(.76,0,.24,1)}
+.hl:hover::after,.hl[aria-current="page"]::after{transform:scaleX(1);transform-origin:0 50%}
+.ps2-mag{transform:translate(calc(var(--mx,0)*1px),calc(var(--my,0)*1px));transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.ps2-cur{position:fixed;left:0;top:0;width:46px;height:46px;margin:-23px 0 0 -23px;border:1.5px solid #ECEAE7;border-radius:50%;mix-blend-mode:difference;pointer-events:none;z-index:95;will-change:transform}
+.ps2-dot{position:fixed;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#ECEAE7;mix-blend-mode:difference;pointer-events:none;z-index:96;will-change:transform}
+@media (pointer:coarse){.ps2-cur,.ps2-dot{display:none}}
+@media (max-width:760px){.hdr nav .hl{display:none}.hdr>div{padding:18px 20px !important}}
+.spin{animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-r{animation:spin-r 22s linear infinite}
+@keyframes spin-r{to{transform:rotate(-360deg)}}
+.sline{transform-origin:50% 0;animation:sline 2s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes sline{0%{transform:scaleY(0);transform-origin:50% 0}50%{transform:scaleY(1);transform-origin:50% 0}50.01%{transform:scaleY(1);transform-origin:50% 100%}100%{transform:scaleY(0);transform-origin:50% 100%}}
+.mq{animation:mq 34s linear infinite}
+.mq-r{animation:mq-r 36s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes mq-r{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.fl{animation:fl 7s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(-3deg)}}
+.kb{animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1.5%,1%)}}
+.band{position:absolute;top:-20%;bottom:-20%;left:0;width:26%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(255,255,255,0));mix-blend-mode:soft-light;animation:band 7s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes band{0%{transform:translateX(-140%) skewX(-16deg)}60%,100%{transform:translateX(480%) skewX(-16deg)}}
+.travel{offset-path:path('M 30 330 C 120 60, 330 40, 420 230');offset-rotate:0deg;animation:travel 5.5s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes travel{0%{offset-distance:0%;opacity:0}10%{opacity:1}80%{offset-distance:100%;opacity:1;transform:scale(1)}90%{offset-distance:100%;opacity:0;transform:scale(.3)}100%{offset-distance:100%;opacity:0}}
+.absorb{animation:absorb 5.5s ease-in-out infinite}
+@keyframes absorb{0%,78%{box-shadow:0 0 0 0 rgba(255,106,77,0)}85%{box-shadow:0 0 0 18px rgba(255,106,77,.35)}100%{box-shadow:0 0 0 40px rgba(255,106,77,0)}}
+.ping{animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.card{transition:transform .6s cubic-bezier(.2,.8,.2,1),background .5s}
+.card:hover{transform:translateY(-10px);background:#26262B !important}
+.card .cdot{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.card:hover .cdot{transform:scale(1.25) rotate(90deg)}
+.btn{transition:background .35s,color .35s}
+.btn:hover{background:#FF6A4D !important;color:#1E1E22 !important}
+.logo-sheen{-webkit-mask-image:url(assets/logo-light.png);mask-image:url(assets/logo-light.png);-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;background:linear-gradient(100deg,#8E8E94 20%,#FFFFFF 38%,#B9A6FF 48%,#FF8A6B 56%,#FFFFFF 64%,#8E8E94 80%);background-size:300% 100%;animation:sheen 7s linear infinite}
+@keyframes sheen{from{background-position:100% 0}to{background-position:-200% 0}}
+.menu{animation:menu-in 1s cubic-bezier(.76,0,.24,1) both}
+@keyframes menu-in{from{clip-path:circle(0% at calc(100% - 80px) 46px)}to{clip-path:circle(160% at calc(100% - 80px) 46px)}}
+.mi{display:inline-block;transform:translateY(115%);animation:ch-up 1s cubic-bezier(.16,1,.3,1) forwards}
+@supports (animation-timeline: view()){
+.rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+.clip{animation:clip linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+}
+@keyframes rv{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes clip{from{clip-path:inset(16% 12% 16% 12% round 64px)}to{clip-path:inset(0 0 0 0 round 32px)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition:none !important}.ch,.mi{transform:none}.fade-up{opacity:1;transform:none}}
+</style>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<div style="background: #ECEAE7; color: #1E1E22; overflow-x: clip">
+
+<div class="ps2-cur" aria-hidden="true" style="transform: translate3d(-100px,-100px,0)"></div>
+<div class="ps2-dot" aria-hidden="true" style="transform: translate3d(-100px,-100px,0)"></div>
+
+<header class="hdr">
+<div style="max-width: 1440px; margin: 0 auto; padding: 26px 40px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="index.html" aria-label="Playskin ana sayfa" style="display: block; line-height: 0"><img src="assets/logo-light.png" alt="Playskin" style="height: 22px; width: auto"></a>
+<nav aria-label="Hızlı menü" style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 500">
+<a class="hl" href="urunler.html">Ürünler</a>
+<a class="hl" href="laboratuvar.html">Laboratuvarımız</a>
+<a class="hl" href="iletisim.html">İletişim</a>
+<button type="button" data-act="menu-toggle" aria-expanded="false" class="ps2-mag" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1.5px solid currentColor; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer"><span style="display: flex; flex-direction: column; gap: 4px"><span style="display: block; width: 18px; height: 1.5px; background: currentColor"></span><span style="display: block; width: 12px; height: 1.5px; background: currentColor"></span></span>Menü</button>
+</nav>
+</div>
+</header>
+
+<div data-menu hidden>
+<div class="menu" role="dialog" aria-modal="true" aria-label="Menü" style="position: fixed; inset: 0; z-index: 80; background: #121214; color: #ECEAE7; overflow: auto">
+<img aria-hidden="true" class="fl" src="assets/molecule-silver.webp" alt="" style="position: absolute; right: 6%; top: 22%; width: min(420px, 40vw); height: auto; opacity: .55; animation-duration: 9s">
+<div style="position: relative; max-width: 1440px; min-height: 100%; margin: 0 auto; padding: 26px 40px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<img src="assets/logo-light.png" alt="Playskin" style="height: 22px; width: auto">
+<button type="button" data-act="menu-close" class="ps2-mag" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1.5px solid #ECEAE7; background: transparent; color: #ECEAE7; font: inherit; font-weight: 600; cursor: pointer"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"></path></svg>Kapat</button>
+</div>
+<nav aria-label="Ana menü" style="display: flex; flex-direction: column; gap: 2px; font-weight: 500; font-size: clamp(2.4rem, 5.6vw, 5.2rem); line-height: 1.08; letter-spacing: -0.035em">
+<a href="index.html" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">01</span><span class="mask"><span class="mi" style="animation-delay: .25s">Ana Sayfa</span></span></a>
+<a href="hakkimizda.html" data-act="menu-close" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">02</span><span class="mask"><span class="mi" style="animation-delay: .32s">Hakkımızda</span></span></a>
+<a href="urunler.html" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">03</span><span class="mask"><span class="mi" style="animation-delay: .39s">Ürünler</span></span></a>
+<a href="laboratuvar.html" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">04</span><span class="mask"><span class="mi" style="animation-delay: .46s">Laboratuvarımız</span></span></a>
+<a href="blog.html" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">05</span><span class="mask"><span class="mi" style="animation-delay: .53s">Blog</span></span></a>
+<a href="iletisim.html" style="display: flex; align-items: baseline; gap: 20px; text-decoration: none"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0; color: #FF8A6B">06</span><span class="mask"><span class="mi" style="animation-delay: .6s">İletişim</span></span></a>
+</nav>
+<div style="margin-top: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px; font-size: 14px; font-weight: 500; color: rgba(236,234,231,.8)">
+<a class="hl" href="tel:+902163691369">+90 (216) 369-1369</a>
+<a class="hl" href="mailto:info@playskin.com.tr">info@playskin.com.tr</a>
+<div style="display: flex; gap: 28px"><a class="hl" href="#">Instagram</a><a class="hl" href="#">YouTube</a><a class="hl" href="#">Facebook</a></div>
+</div>
+</div>
+</div>
+</div>
+
+<main>
+
+<section data-par="" aria-label="Hakkımızda" style="position: relative; height: max(660px, min(900px, 100vh)); overflow: hidden; background: radial-gradient(ellipse at 72% 55%, #F4F3F2 0%, #E2E0DE 50%, #D2CFCF 100%)">
+<div aria-hidden="true" style="position: absolute; right: 4%; top: 0; height: 100%; aspect-ratio: 813 / 1000; transform: translate(calc(var(--cx, 0) * -16px), calc(var(--cy, 0) * 10px)); transition: transform .9s cubic-bezier(.2,.8,.2,1)">
+<div class="fade-up" style="position: absolute; inset: 0; animation-duration: 1.8s; animation-delay: .2s">
+<div class="kb" style="position: absolute; inset: 0; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, #000 55%, transparent 100%); mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, #000 55%, transparent 100%)">
+<img src="assets/dna-white.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply">
+<div class="band"></div>
+</div>
+</div>
+</div>
+<img aria-hidden="true" class="fl" src="assets/molecule-silver.webp" alt="" style="position: absolute; left: 46%; top: 18%; width: 130px; height: auto; animation-duration: 8s; filter: drop-shadow(0 18px 24px rgba(0,0,0,.16))">
+<div style="position: relative; height: 100%; max-width: 1440px; margin: 0 auto; padding: 130px 40px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<p class="fade-up" style="margin: 0; display: inline-flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 600; letter-spacing: .24em; animation-delay: .1s"><span aria-hidden="true" style="width: 28px; height: 1.5px; background: currentColor"></span>HAKKIMIZDA · PLAYSKIN LABORATUVARLARININ DOĞUŞU</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px">
+<h1 style="margin: 0; font-weight: 600; font-size: clamp(3rem, 7.4vw, 8rem); line-height: .94; letter-spacing: -0.05em">
+<span style="display: block"><span class="mask"><span class="ch" style="animation-delay: .25s">Hücresel</span></span> <span class="mask"><span class="ch" style="animation-delay: .35s">bir</span></span></span>
+<span style="display: block"><span class="mask"><span class="ch" style="animation-delay: .45s; color: #FF6A4D">yolculuktur.</span></span></span>
+</h1>
+<div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: .24em"><span>KAYDIR</span><span style="position: relative; display: block; width: 1.5px; height: 64px; background: rgba(30,30,34,.2); overflow: hidden"><span class="sline" style="position: absolute; inset: 0; background: #1E1E22"></span></span></div>
+</div>
+</div>
+</section>
+
+<section data-sp="760" aria-label="Her şey bir soruyla başladı" style="position: relative; height: 1000px; background: #ECEAE7">
+<div style="position: sticky; top: 0; height: min(760px, 100vh); display: flex; align-items: center; max-width: 1440px; margin: 0 auto; padding: 0 40px; box-sizing: border-box">
+<div style="display: flex; flex-direction: column; gap: 32px; max-width: 1200px">
+<p style="margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .24em; color: #5A5A60">HER ŞEY BİR SORUYLA BAŞLADI…</p>
+<p style="margin: 0; font-weight: 500; font-size: clamp(2.3rem, 5vw, 5.4rem); line-height: 1.05; letter-spacing: -0.04em">
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 0), 1)">“Cilt</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 1), 1)">bakımında</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 2), 1)">neden</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 3), 1)">hâlâ</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 4), 1); color: #FF6A4D">yüzeysel</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 5), 1); color: #FF6A4D">çözümlerle</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 11 - 6), 1)">yetiniyoruz?”</span>
+</p>
+<p style="margin: 0; max-width: 640px; font-size: 18px; line-height: 1.7; color: #4A4A50; opacity: clamp(0, calc(var(--p, 0) * 4 - 2.6), 1); transform: translateY(calc((1 - clamp(0, calc(var(--p, 0) * 4 - 2.6), 1)) * 30px))">Bilim, tıpta hücre düzeyinde tedaviler geliştirirken; neden dermokozmetik dünyası aynı derinliğe ulaşmasın?</p>
+</div>
+</div>
+</section>
+
+<section aria-label="Hikâyemiz" style="padding: 40px 40px 120px; background: #ECEAE7">
+<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; gap: 140px">
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 48px 80px; align-items: center">
+<div class="rv" style="display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #C9432A">01 · ONKOLOJİDEN ESTETİĞE</span>
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(2.2rem, 3.8vw, 3.8rem); line-height: 1.02; letter-spacing: -0.04em">Doğru noktaya, doğru dozda.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4A50">Modern tıpta, özellikle onkoloji alanında kullanılan lipozom teknolojisi; aktif maddeleri hücresel seviyede, hedefli ve kontrollü şekilde taşıyabilme kabiliyetiyle devrim yarattı. Bu sistem, kanser tedavilerinde etken maddelerin doğru noktaya, doğru dozda, minimum yan etkiyle iletilmesini sağlamak için geliştirildi.</p>
+</div>
+<div role="img" aria-label="Lipozomun aktif maddeyi hedef hücreye taşıması, temsili" class="rv" style="position: relative; width: 460px; max-width: 100%; height: 400px; margin: 0 auto; border-radius: 32px; overflow: hidden; background: radial-gradient(circle at 70% 60%, #FFFFFF, #E2E0DE 70%)">
+<svg aria-hidden="true" viewBox="0 0 460 400" style="position: absolute; inset: 0; width: 100%; height: 100%"><path d="M 30 330 C 120 60, 330 40, 420 230" fill="none" stroke="rgba(30,30,34,.25)" stroke-width="1.5" stroke-dasharray="4 8"></path></svg>
+<div class="absorb" style="position: absolute; left: 340px; top: 170px; width: 150px; height: 150px; border-radius: 50%; border: 6px dotted rgba(140,140,148,.8); background: radial-gradient(circle at 40% 35%, #FFFFFF, #D9D7D6 70%)"><span style="position: absolute; left: 38%; top: 38%; width: 24%; aspect-ratio: 1; border-radius: 50%; background: #1E1E22"></span></div>
+<div class="travel" style="position: absolute; left: 0; top: 0; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; border: 3px dotted rgba(255,106,77,.9); background: radial-gradient(circle at 35% 30%, #FFFFFF, #FFD5C8 70%)"><span style="position: absolute; left: 34%; top: 34%; width: 32%; aspect-ratio: 1; border-radius: 50%; background: #FF6A4D"></span></div>
+<span style="position: absolute; left: 20px; bottom: 18px; font-size: 12px; font-weight: 600; letter-spacing: .14em; color: #5A5A60">LİPOZOM → HÜCRE</span>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 48px 80px; align-items: center">
+<div class="clip" style="position: relative; height: 560px; border-radius: 32px; overflow: hidden; background: #DCE6E8"><img src="assets/model-teal.webp" alt="Playskin kampanya görseli" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%"></div>
+<div class="rv" style="display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #C9432A">02 · DOĞUŞ</span>
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(2.2rem, 3.8vw, 3.8rem); line-height: 1.02; letter-spacing: -0.04em">İşte tam burada PLAYSKIN Laboratuvarları doğdu.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4A50">Bilimin bu güçlü taşıyıcı sistemini estetik dermatolojiye uyarlama fikriyle… PLAYSKIN, dermokozmetiğe sadece “bakım” olarak bakmadı. Cildi bir biyolojik yapı, bir doku sistemi olarak ele aldı.</p>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 48px 80px; align-items: center">
+<div class="rv" style="display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #C9432A">03 · LİPOZOM + EXOSOME</span>
+<h2 style="margin: 0; font-weight: 600; font-size: clamp(2.2rem, 3.8vw, 3.8rem); line-height: 1.02; letter-spacing: -0.04em">Doğru taşıyıcı olmadan gerçek etkinlik olmaz.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4A50">Bir içerik ne kadar değerli olursa olsun, doğru taşıyıcı sistemle buluşmadıkça gerçek etkinliğine ulaşamaz. Bu nedenle PLAYSKIN Laboratuvarları formülleri geliştirirken lipozomal enkapsülasyon sistemlerini merkeze aldı. Lipozom teknolojisinin yanı sıra, yeni nesil exosome teknolojilerini de ürünlerine entegre ederek hücresel performansı bir üst seviyeye taşıdı.</p>
+</div>
+<div class="clip" style="position: relative; height: 560px; border-radius: 32px; overflow: hidden; background: #E9E5E3"><img src="assets/lab-render.webp" alt="Playskin laboratuvar görseli" style="width: 100%; height: 100%; object-fit: cover"></div>
+</div>
+
+</div>
+</section>
+
+<section aria-labelledby="ilke-baslik" style="padding: 120px 40px; background: #121214; color: #ECEAE7">
+<div style="max-width: 1440px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px">
+<div class="rv" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<h2 id="ilke-baslik" style="margin: 0; max-width: 760px; font-weight: 600; font-size: clamp(2.4rem, 4.4vw, 4.4rem); line-height: 1; letter-spacing: -0.045em">Yaklaşımımız yüzeysel değil; <span style="color: #FF8A6B">hücresel düzeydedir.</span></h2>
+<img aria-hidden="true" class="fl" src="assets/dna-crystal.webp" alt="" style="width: 110px; height: auto; opacity: .9">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
+<div class="card rv" style="display: flex; flex-direction: column; justify-content: space-between; gap: 60px; min-height: 280px; padding: 30px; border-radius: 28px; background: #1C1C20">
+<span aria-hidden="true" class="cdot" style="width: 56px; height: 56px; border-radius: 50%; border: 5px dotted #FF6A4D; background: radial-gradient(circle, #FFFFFF 0 22%, transparent 24%)"></span>
+<p style="margin: 0; font-weight: 500; font-size: 22px; line-height: 1.3; letter-spacing: -0.02em">Aktif içerikleri mikro düzeyde kapsülledi.</p>
+</div>
+<div class="card rv" style="display: flex; flex-direction: column; justify-content: space-between; gap: 60px; min-height: 280px; padding: 30px; border-radius: 28px; background: #1C1C20">
+<span aria-hidden="true" class="cdot" style="width: 56px; height: 56px; border-radius: 16px; border: 2px solid #B9A6FF; background: linear-gradient(135deg, rgba(185,166,255,.4), transparent)"></span>
+<p style="margin: 0; font-weight: 500; font-size: 22px; line-height: 1.3; letter-spacing: -0.02em">Stabilitelerini artırdı.</p>
+</div>
+<div class="card rv" style="display: flex; flex-direction: column; justify-content: space-between; gap: 60px; min-height: 280px; padding: 30px; border-radius: 28px; background: #1C1C20">
+<span aria-hidden="true" class="cdot" style="width: 56px; height: 56px; border-radius: 50%; background: conic-gradient(#FF8A6B 0 75%, rgba(236,234,231,.15) 75% 100%)"></span>
+<p style="margin: 0; font-weight: 500; font-size: 22px; line-height: 1.3; letter-spacing: -0.02em">Biyoyararlanımlarını yükseltti.</p>
+</div>
+<div class="card rv" style="display: flex; flex-direction: column; justify-content: space-between; gap: 60px; min-height: 280px; padding: 30px; border-radius: 28px; background: #1C1C20">
+<span aria-hidden="true" class="cdot" style="position: relative; width: 56px; height: 56px; border-radius: 50%; border: 1.5px solid #ECEAE7"><span style="position: absolute; inset: 35%; border-radius: 50%; background: #FF6A4D"></span></span>
+<p style="margin: 0; font-weight: 500; font-size: 22px; line-height: 1.3; letter-spacing: -0.02em">Hedef dokuya daha kontrollü ulaşmalarını sağladı.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="lab-baslik" style="padding: 140px 40px; background: #ECEAE7">
+<div style="max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 56px 80px; align-items: center">
+<div class="rv" style="display: flex; flex-direction: column; gap: 26px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: .2em; color: #C9432A">KORE · MADRİD</span>
+<h2 id="lab-baslik" style="margin: 0; font-weight: 600; font-size: clamp(2.2rem, 3.8vw, 3.8rem); line-height: 1.02; letter-spacing: -0.04em">Avrupa ve Kore'den gelen ileri teknoloji altyapısı.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A4A50">Yalnızca trendleri değil, bilimsel sistemleri de inceliyoruz. Playskin'e ait Kore'deki 4 laboratuvar ve Madrid'de bulunan laboratuvarımızda, reverse engineering yaklaşımıyla etkinliği kanıtlanmış mekanizmaları analiz ediyor, geliştiriyor ve optimize ediyoruz.</p>
+<div style="display: flex; gap: 48px; margin-top: 8px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600; font-size: 96px; line-height: .9; letter-spacing: -0.06em">4</span><span style="font-size: 14px; font-weight: 500; color: #5A5A60">Kore'deki laboratuvar</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600; font-size: 96px; line-height: .9; letter-spacing: -0.06em; color: #FF6A4D">1</span><span style="font-size: 14px; font-weight: 500; color: #5A5A60">Madrid'deki laboratuvar</span></div>
+</div>
+</div>
+<div role="img" aria-label="Kore ve Madrid'deki laboratuvarları gösteren soyut küre" class="rv" style="position: relative; width: min(520px, 100%); aspect-ratio: 1; margin: 0 auto">
+<div class="spin" style="position: absolute; inset: 0; border-radius: 50%; border: 1.5px dashed rgba(30,30,34,.3); animation-duration: 60s"></div>
+<div class="spin-r" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(30,30,34,.15); transform: scaleX(.45); animation: none"></div>
+<div style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(30,30,34,.15); transform: scaleY(.45)"></div>
+<div style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(30,30,34,.12); transform: scaleX(.8)"></div>
+<div style="position: absolute; inset: 8%; border-radius: 50%; background: radial-gradient(circle at 38% 32%, #FFFFFF, #DDDBD9 65%, #C8C5C3)"></div>
+<div style="position: absolute; left: 33%; top: 34%; display: flex; align-items: center; gap: 10px"><span style="position: relative; width: 14px; height: 14px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; background: #FF6A4D"></span><span style="position: absolute; inset: 0; border-radius: 50%; background: #FF6A4D"></span></span><span style="padding: 6px 12px; border-radius: 999px; background: #1E1E22; color: #ECEAE7; font-size: 12px; font-weight: 600">Madrid · 1</span></div>
+<div style="position: absolute; left: 66%; top: 42%; display: flex; align-items: center; gap: 10px"><span style="position: relative; width: 14px; height: 14px"><span class="ping" style="position: absolute; inset: 0; border-radius: 50%; background: #9C86F0; animation-delay: -1s"></span><span style="position: absolute; inset: 0; border-radius: 50%; background: #9C86F0"></span></span><span style="padding: 6px 12px; border-radius: 999px; background: #1E1E22; color: #ECEAE7; font-size: 12px; font-weight: 600">Kore · 4</span></div>
+</div>
+</div>
+</section>
+
+<section data-sp="760" aria-label="Manifesto" style="position: relative; height: 1000px; background: #ECEAE7">
+<div style="position: sticky; top: 0; height: min(760px, 100vh); display: flex; flex-direction: column; justify-content: center; gap: 48px; max-width: 1440px; margin: 0 auto; padding: 0 40px; box-sizing: border-box">
+<p style="margin: 0; max-width: 1200px; font-weight: 500; font-size: clamp(2.2rem, 4.8vw, 5rem); line-height: 1.06; letter-spacing: -0.04em">
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 0), 1)">Bizim</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 1), 1)">için</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 2), 1)">inovasyon</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 3), 1)">bir</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 4), 1)">pazarlama</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 5), 1)">dili</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 6), 1)">değil,</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 7), 1); color: #FF6A4D">bir</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 8), 1); color: #FF6A4D">laboratuvar</span>
+<span style="opacity: clamp(.12, calc(var(--p, 0) * 13 - 9), 1); color: #FF6A4D">disiplinidir.</span>
+</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; opacity: clamp(0, calc(var(--p, 0) * 4 - 2.8), 1)">
+<img src="assets/logo-dark.png" alt="Playskin" style="height: 30px; width: auto">
+<span style="font-size: clamp(1.1rem, 1.8vw, 1.6rem); font-weight: 300; letter-spacing: .02em">Hücresel gücün estetik yansımasıdır.</span>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer style="background: #121214; color: #ECEAE7; overflow: hidden; padding: 100px 0 36px">
+<div aria-hidden="true" style="overflow: hidden; margin-bottom: 72px">
+<div class="mq-r" style="display: flex; width: max-content; font-weight: 600; font-size: clamp(3.6rem, 8vw, 8rem); line-height: 1; letter-spacing: -0.05em; white-space: nowrap">
+<div style="display: flex; align-items: center; gap: 48px; padding-right: 48px"><span>Playskin Dünyasına Katılın</span><span style="color: #FF6A4D">✦</span><span style="color: transparent; -webkit-text-stroke: 1.5px #ECEAE7">Playskin Dünyasına Katılın</span><span style="color: #B9A6FF">✦</span></div>
+<div style="display: flex; align-items: center; gap: 48px; padding-right: 48px"><span>Playskin Dünyasına Katılın</span><span style="color: #FF6A4D">✦</span><span style="color: transparent; -webkit-text-stroke: 1.5px #ECEAE7">Playskin Dünyasına Katılın</span><span style="color: #B9A6FF">✦</span></div>
+</div>
+</div>
+<div style="max-width: 1440px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 64px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding-top: 40px; border-top: 1px solid rgba(236,234,231,.16)">
+<p style="margin: 0; max-width: 640px; font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2.2rem); line-height: 1.15; letter-spacing: -0.03em">Detaylı bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+<a class="btn ps2-mag" href="iletisim.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 32px; border-radius: 999px; background: #FF6A4D; color: #1E1E22; text-decoration: none; font-weight: 600; font-size: 17px">Bize ulaşın</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; font-size: 14px; font-weight: 500">
+<nav aria-label="Alt menü" style="display: flex; flex-wrap: wrap; gap: 12px 32px"><a class="hl" href="urunler.html">Ürünler</a><a class="hl" href="blog.html">Blog</a><a class="hl" href="iletisim.html">İletişim</a><a class="hl" href="#">Politikalarımız</a></nav>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 28px"><a class="hl" href="tel:+902163691369">+90 (216) 369-1369</a><a class="hl" href="#">Instagram</a><a class="hl" href="#">YouTube</a><a class="hl" href="#">Facebook</a></div>
+</div>
+<div aria-hidden="true" class="logo-sheen" style="width: 100%; aspect-ratio: 1400 / 147"></div>
+<p style="margin: 0; font-size: 13px; color: rgba(236,234,231,.65)">© Tüm hakları saklıdır · Slimwell Group</p>
+</div>
+</footer>
+
+</div>
+</body>
+</html>
