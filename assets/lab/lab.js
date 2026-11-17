@@ -119,36 +119,26 @@ let galShift = 0;
 function measureGallery() { if (galTrack) galShift = Math.max(0, galTrack.scrollWidth - innerWidth); }
 
 /* ------------------------------------------------------------------ */
-/* LED: video kaydırmayla oynar                                        */
+/* LED: videodan alınan renk kareleri kaydırmayla değişir             */
+/* (her tarayıcıda çalışır; video karesi aramaya bağlı değil)         */
 /* ------------------------------------------------------------------ */
-const ledVideo = $('.led-video');
+const ledFrames = $$('.led-frame');
 const ledItems = $$('.led-list li').map((el) => ({ el, t0: parseFloat(el.dataset.t0), t1: parseFloat(el.dataset.t1), c: el.style.getPropertyValue('--c') }));
 const ledMedia = $('.led-media');
-let ledUnlocked = false;
-function unlockLed() {
-  if (ledUnlocked || !ledVideo) return; ledUnlocked = true;
-  ensureSrc(ledVideo);
-  const p = ledVideo.play(); if (p) p.then(() => ledVideo.pause()).catch(() => {});
-}
-new IntersectionObserver((es) => { if (es[0].isIntersecting) { ensureSrc(ledVideo); unlockLed(); } }, { rootMargin: '150% 0px' }).observe(S.led.el);
-['touchstart', 'pointerdown', 'keydown'].forEach((ev) => addEventListener(ev, unlockLed, { once: true, passive: true }));
 let ledLast = -1;
 let ledColor = [0.69, 0.3, 1];
 function updateLed(y) {
-  if (!ledVideo) return;
+  if (!ledFrames.length) return;
   const p = prog('led', y);
   if (p < -0.4 || p > 1.3) return;
-  const dur = ledVideo.duration || 10;
-  const t = seg(p, 0.02, 0.94) * (dur - 0.05);
-  if (ledVideo.readyState >= 1 && !ledVideo.seeking && Math.abs(ledVideo.currentTime - t) > 0.035) {
-    try { if (typeof ledVideo.fastSeek === 'function' && Math.abs(ledVideo.currentTime - t) > 1.5) ledVideo.fastSeek(t); else ledVideo.currentTime = t; } catch (e) {}
-  }
-  const idx = ledItems.findIndex((l) => t >= l.t0 && t < l.t1);
+  const t = seg(p, 0.02, 0.94) * 10;
+  const idx = Math.max(0, ledItems.findIndex((l) => t >= l.t0 && t < l.t1));
   if (idx !== ledLast) {
     ledLast = idx;
-    ledItems.forEach((l, n) => l.el.classList.toggle('on', n === idx && p > -0.05));
-    if (ledMedia && idx >= 0) ledMedia.style.setProperty('--led-glow', ledItems[idx].c.trim() + '66');
-    if (idx >= 0) { const n = parseInt(ledItems[idx].c.trim().slice(1), 16); ledColor = [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255]; }
+    ledFrames.forEach((el, n) => { el.style.opacity = n === idx ? 1 : 0; });
+    ledItems.forEach((l, n) => l.el.classList.toggle('on', n === idx));
+    if (ledMedia) ledMedia.style.setProperty('--led-glow', ledItems[idx].c.trim() + '66');
+    const n = parseInt(ledItems[idx].c.trim().slice(1), 16); ledColor = [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
   }
 }
 
@@ -346,7 +336,7 @@ function timeline(y) {
 /* ------------------------------------------------------------------ */
 /* Ürünler: net görsel katmanı (yansıma, gölge, parlama, tarama)       */
 /* ------------------------------------------------------------------ */
-const plEls = $$('.pl').map((el) => ({ el, body: $('.pl-body', el), refl: $('.pl-refl', el), line: $('.pl-line', el), sheen: $('.pl-sheen', el), last: '' }));
+const plEls = $$('.pl').map((el) => ({ el, body: $('.pl-body', el), refl: $('.pl-refl', el), line: $('.pl-line', el), last: '' }));
 const prodLayer = $('.prod-layer');
 const pinkImg = $('.pl[data-pl="0"] .pl-img');
 function updateProducts(P) {
@@ -355,7 +345,6 @@ function updateProducts(P) {
   prodLayer.style.visibility = show ? '' : 'hidden';
   if (!show) return;
   prodLayer.style.opacity = P.pvis.toFixed(3);
-  const band = lerp(30 - P.prot * 2, lerp(-25, 125, P.sweep), P.swOn);
   const tf = 'translate(-50%,-50%) translate(' + P.px.toFixed(2) + 'vw,' + P.py.toFixed(2) + 'vh) scale(' + P.ps.toFixed(4) + ') rotateY(' + P.prot.toFixed(2) + 'deg)';
   [P.d0, P.d1, P.d2, P.d3].forEach((d, i) => {
     const o = plEls[i]; if (!o) return;
@@ -368,9 +357,7 @@ function updateProducts(P) {
     o.body.style.clipPath = d < 0.001 ? '' : (incoming ? 'inset(' + cut + ' 0 0 0)' : 'inset(0 0 ' + cut + ' 0)');
     o.line.style.top = incoming ? cut : ((1 - d) * 100).toFixed(2) + '%';
     o.line.style.opacity = d > 0.01 && d < 0.99 ? 1 : 0;
-    o.refl.style.opacity = (0.2 * (1 - d)).toFixed(3);
-    o.sheen.style.setProperty('--b', band.toFixed(1));
-    o.sheen.style.opacity = (0.55 + 0.45 * P.swOn).toFixed(2);
+    o.refl.style.opacity = (0.08 * (1 - d)).toFixed(3);
   });
 }
 
