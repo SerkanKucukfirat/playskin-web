@@ -88,22 +88,21 @@ main{position:relative;z-index:1}
 .car-ctrl{display:flex;gap:10px}
 .car-btn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(20,20,22,.22);background:rgba(255,255,255,.7);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
 .car-btn:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.car{position:relative;border-radius:32px;overflow:hidden;background:#E9E8E6;box-shadow:0 30px 80px rgba(20,20,22,.10);touch-action:pan-y}
+.car{position:relative;touch-action:pan-y}
+.car-view{border-radius:32px;overflow:hidden;background:#E9E8E6;box-shadow:0 30px 80px rgba(20,20,22,.10)}
 .car-track{display:flex;transition:transform .9s cubic-bezier(.7,0,.2,1)}
 .slide{flex:0 0 100%;position:relative;display:block;aspect-ratio:1939/811;overflow:hidden;color:inherit;text-decoration:none}
 .slide picture,.slide img{width:100%;height:100%;object-fit:cover}
-.slide img{transition:transform 6s ease-out}
-.slide[aria-current="true"] img{transform:scale(1.04)}
 .slide-video{background:#07070A;color:#F2F2F0;display:grid;grid-template-columns:1fr minmax(0,.62fr)}
 .sv-video{grid-column:2;grid-row:1;width:100%;height:100%;object-fit:cover}
 .sv-text{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:clamp(24px,5vw,80px)}
 .sv-text .eyebrow{color:#C48BFF}
 .sv-title{font-size:clamp(2rem,4.6vw,4.8rem);font-weight:600;line-height:.95;letter-spacing:-.04em}
 .sv-cta{align-self:flex-start;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#F2F2F0;color:#0B0B0D;font-size:14px;font-weight:600}
-.car-dots{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:8px;pointer-events:none}
-.car-dot{pointer-events:auto;width:44px;height:28px;border:0;padding:0;background:none;cursor:pointer;display:flex;align-items:center}
-.car-dot span{display:block;width:100%;height:3px;border-radius:3px;background:rgba(255,255,255,.55);overflow:hidden;box-shadow:0 0 0 1px rgba(20,20,22,.08)}
-.car-dot span i{display:block;height:100%;width:100%;background:#FFFFFF;transform-origin:0 50%;transform:scaleX(0)}
+.car-dots{display:flex;justify-content:center;gap:8px;padding-top:14px}
+.car-dot{width:44px;height:28px;border:0;padding:0;background:none;cursor:pointer;display:flex;align-items:center}
+.car-dot span{display:block;width:100%;height:3px;border-radius:3px;background:rgba(20,20,22,.14);overflow:hidden}
+.car-dot span i{display:block;height:100%;width:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(0)}
 .car-dot[aria-current="true"] span i{transform:scaleX(var(--k,1))}
 
 /* galeri — yatay akış */
@@ -211,11 +210,11 @@ main{position:relative;z-index:1}
   .leaders{display:none}
   .lbl{left:var(--gutter)!important;top:auto!important;bottom:20px;width:auto;right:var(--gutter)}
   .note{top:84px;bottom:auto}
-  .car{border-radius:24px}
+  .car-view{border-radius:24px}
   .slide{aspect-ratio:2/3}
   .slide-video{display:block}
   .sv-video{position:absolute;inset:0}
-  .sv-text{position:absolute;left:0;right:0;bottom:0;padding:24px 20px 56px;background:linear-gradient(0deg,rgba(7,7,10,.85),rgba(7,7,10,0))}
+  .sv-text{position:absolute;left:0;right:0;bottom:0;padding:24px 20px 28px;background:linear-gradient(0deg,rgba(7,7,10,.85),rgba(7,7,10,0))}
   .car-btn{width:48px;height:48px}
   .gcard{height:62vh}
   .newin-grid{grid-template-columns:1fr}

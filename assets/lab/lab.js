@@ -133,6 +133,7 @@ function unlockLed() {
 new IntersectionObserver((es) => { if (es[0].isIntersecting) { ensureSrc(ledVideo); unlockLed(); } }, { rootMargin: '150% 0px' }).observe(S.led.el);
 ['touchstart', 'pointerdown', 'keydown'].forEach((ev) => addEventListener(ev, unlockLed, { once: true, passive: true }));
 let ledLast = -1;
+let ledColor = [0.69, 0.3, 1];
 function updateLed(y) {
   if (!ledVideo) return;
   const p = prog('led', y);
@@ -147,6 +148,7 @@ function updateLed(y) {
     ledLast = idx;
     ledItems.forEach((l, n) => l.el.classList.toggle('on', n === idx && p > -0.05));
     if (ledMedia && idx >= 0) ledMedia.style.setProperty('--led-glow', ledItems[idx].c.trim() + '66');
+    if (idx >= 0) { const n = parseInt(ledItems[idx].c.trim().slice(1), 16); ledColor = [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255]; }
   }
 }
 
@@ -253,9 +255,11 @@ function base() {
     top: C.white, bot: C.silver, acc: C.pink, glow: 0.3, rays: 0, caustic: 0, dark: 0,
     pA: 0.7, pCol: C.pinkP, pSpeed: 1,
     surf: 0, rip: 0, cream: 0, mist: 0,
-    lipo: 0, build: 0, cut: 0
+    // Lipozom her bölümde eşlik eder: lanch 1 = ekrana sabit küçük eşlikçi, 0 = sahnede (formül)
+    lipo: 1, build: 1, cut: 0, lanch: 1, lsp: isPhone ? [0.56, 0.64] : [-0.62, 0.5], ld: 6, lsc: isPhone ? 0.22 : 0.26, emis: [0, 0, 0]
   };
 }
+const companion = (P, desk, phone, size) => { P.lanch = 1; P.lsp = isPhone ? phone : desk; P.lsc = size * (isPhone ? 0.8 : 1); return P; };
 function S1(p) {
   const P = base();
   const a = ease(seg(p, 0, 0.72));
@@ -287,13 +291,16 @@ function S2(p) {
   P.acc = pick(C.pink, C.orange, C.teal, C.rose); P.pCol = pick(C.pinkP, C.orP, C.tlP, C.rgP);
   P.glow = 0.55; P.rays = (w1 - w2) * 0.9 + w3 * 0.35; P.caustic = 0.18 + (w1 - w2) * 0.35 + (w2 - w3) * 0.2;
   P.pA = 0.85;
-  return P;
+  return companion(P, [0.8, 0.6], [0.6, 0.66], 0.2);
 }
 function CALM() {
   const P = base();
   P.cam = [0, 0, 8]; P.look = [0, 0, 0]; P.by = 0; P.d0 = 1; P.floor = 0;
   P.top = C.white; P.bot = hex('#E9E9EB'); P.acc = C.pink; P.glow = 0.18; P.pA = 0.2; P.pCol = hex('#E6C9D6'); P.pSpeed = 0.4;
-  return P;
+  return companion(P, [-0.8, -0.62], [0.62, 0.7], 0.26);
+}
+function RUT() {
+  return companion(CALM(), [0.8, 0.42], [0.62, 0.72], 0.34);
 }
 function S3(p) {
   const P = CALM();
@@ -306,7 +313,7 @@ function S3(p) {
   P.sph = 0.12; P.thick = 0.5; P.dropOn = seg(p, 0.01, 0.07) * (1 - i); P.tint = C.serum;
   P.surf = seg(p, 0, 0.1); P.rip = seg(p, 0.36, 0.64); P.cream = easeOut(seg(p, 0.44, 0.8)) * 0.62; P.mist = seg(p, 0.72, 1);
   P.top = C.skinTop; P.bot = C.skinBot; P.acc = C.peach; P.glow = 0.3; P.pA = 0.2; P.pCol = hex('#F4C9B5');
-  return P;
+  return companion(P, [0.74, 0.5], [0.6, 0.66], 0.24);
 }
 function S4(p) {
   const P = CALM();
@@ -315,14 +322,16 @@ function S4(p) {
   P.look = [isPhone ? 0 : 0.3, isPhone ? -0.5 : 0, 0];
   const s = lerp(0.3, 1.02, ease(seg(p, 0, 0.16)));
   P.dropPos = [0, isPhone ? 0.4 : 0, 0]; P.dropS = [s, s, s]; P.sph = 1; P.thick = 1.4; P.tint = C.water; P.dropOn = 1;
-  P.lipo = seg(p, 0.04, 0.14); P.build = seg(p, 0.06, 0.32); P.cut = ease(seg(p, 0.16, 0.44));
+  P.lipo = 1; P.build = 1; P.cut = ease(seg(p, 0.16, 0.44));
+  P.lanch = 0; P.lsc = lerp(0.4, isPhone ? 0.72 : 1, ease(seg(p, 0, 0.2)));
   P.top = C.white; P.bot = hex('#E1E4E9'); P.acc = C.blue; P.glow = 0.35; P.pA = 0.12; P.pCol = hex('#B9D3EE');
   return P;
 }
 function LEDP() {
   const P = CALM();
-  P.top = hex('#0B0B0D'); P.bot = hex('#050506'); P.acc = hex('#7A3BFF'); P.dark = 1; P.glow = 0.4; P.pA = 0;
-  return P;
+  P.top = hex('#0B0B0D'); P.bot = hex('#050506'); P.acc = ledColor; P.dark = 1; P.glow = 0.4; P.pA = 0;
+  P.emis = ledColor.map((v) => v * 0.45);
+  return companion(P, [-0.12, -0.42], [0.6, 0.7], 0.36);
 }
 function timeline(y) {
   let P = S1(clamp(prog('acilis', y)));
@@ -331,6 +340,7 @@ function timeline(y) {
   P = blend(P, S3(clamp(prog('doku', y))), enter('doku', y));
   P = blend(P, S4(clamp(prog('formul', y))), enter('formul', y));
   P = blend(P, CALM(), enter('galeri', y));
+  P = blend(P, RUT(), enter('rutin', y));
   P = blend(P, LEDP(), enter('led', y));
   return P;
 }
@@ -726,16 +736,12 @@ async function initGL() {
   }
   resize();
 
-  let lastKey = '';
+  const vR = new THREE.Vector3(), vU = new THREE.Vector3(), vF = new THREE.Vector3(), vS = new THREE.Vector3(), vW = new THREE.Vector3(), vN = new THREE.Vector3();
   function frame(P, t) {
     const idle = reduce ? 0 : 1;
-    // Ekran tamamen sabit ve görünmezken (LED videosu tam ekran, footer) çizimi atla
-    const key = P.dark > 0.999 ? 'dark' : '';
-    if (key && key === lastKey) return;
-    lastKey = key;
-
     camera.position.set(P.cam[0], P.cam[1], P.cam[2]);
     camera.lookAt(P.look[0], P.look[1], P.look[2]);
+    camera.updateMatrixWorld();
     col(P.top, bgU.uTop.value); col(P.bot, bgU.uBot.value); col(P.acc, bgU.uAcc.value);
     bgU.uGlow.value = P.glow; bgU.uRays.value = P.rays; bgU.uCaustic.value = P.caustic; bgU.uDark.value = P.dark; bgU.uTime.value = t;
 
@@ -774,15 +780,27 @@ async function initGL() {
 
     lipo.visible = P.lipo > 0.01;
     if (lipo.visible) {
-      lipo.position.copy(drop.position);
-      lipo.scale.setScalar(lerp(0.001, isPhone ? 0.72 : 1, ease(P.lipo)));
-      lipo.rotation.set(0.25, scrollY * 0.0004, 0.1);
+      // Ekrana sabit eşlikçi konumu ile sahnedeki (formül) konum arasında karışım
+      const e = camera.matrixWorld.elements;
+      vR.set(e[0], e[1], e[2]); vU.set(e[4], e[5], e[6]); vF.set(-e[8], -e[9], -e[10]);
+      const tanH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      vS.copy(vF).addScaledVector(vR, P.lsp[0] * tanH * camera.aspect).addScaledVector(vU, P.lsp[1] * tanH).multiplyScalar(P.ld).add(camera.position);
+      vW.set(P.dropPos[0], P.dropPos[1], P.dropPos[2]);
+      lipo.position.copy(vW).lerp(vS, P.lanch);
+      const breathe = 1 + 0.03 * Math.sin(t * 1.3) * idle;
+      lipo.scale.setScalar(Math.max(0.001, P.lsc * P.lipo * breathe));
+      lipo.rotation.set(0.25 + t * 0.04 * idle * P.lanch, t * 0.16 * idle * P.lanch + scrollY * 0.0004, 0.1);
       buildU.value = P.build * 1.3;
-      clipPlane.constant = lerp(2.4, -0.1, P.cut);
-      actIn.uA.value = 0.9 * P.lipo * P.cut; actMid.uA.value = 0.8 * P.lipo * P.build;
+      if (P.cut > 0.002) {
+        vN.copy(camera.position).sub(lipo.position).normalize();
+        clipPlane.normal.copy(vN).negate();
+        clipPlane.constant = vN.dot(lipo.position) + lerp(2.4, -0.1, P.cut) * lipo.scale.x;
+      } else { clipPlane.normal.set(0, 0, -1); clipPlane.constant = 1e5; }
+      col(P.emis, headMat.emissive); col(P.emis.map((v) => v * 0.6), tailMat.emissive);
+      actIn.uA.value = 0.9 * P.cut; actMid.uA.value = 0.8 * P.build;
       actIn.uTime.value = t; actMid.uTime.value = t;
       lipo.updateMatrixWorld();
-      placeLabels();
+      if (P.lanch < 0.5) placeLabels();
     }
     renderer.render(scene, camera);
   }
