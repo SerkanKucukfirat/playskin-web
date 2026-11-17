@@ -39,19 +39,20 @@ Site GitHub Pages ile yayınlanır: **Settings → Pages → Source: Deploy from
 
 ## Ana sayfa deneyimi (`assets/lab/`)
 
-Tek bir three.js (r160, jsDelivr) sahnesi sayfa boyunca yaşar; kaydırma bir zaman çizelgesini sürer (`lab.js` içindeki `S1`…`S7`).
+Tek bir three.js (r160, jsDelivr) sahnesi sayfa boyunca yaşar; kaydırma gecikmesiz bir zaman çizelgesini sürer (`lab.js`).
 
-| Bölüm | Sahne |
+| Bölüm | İçerik |
 |---|---|
-| Açılış | Cam damlanın içinde Pink Cleansing Mist; kamera yaklaşır, şişe dönerek etiketi gösterir, damlanın içine girilir |
-| Ürünlerin dünyası | Pink Mist → Vitamin C → NAD⁺; damla mercek olur, ürün merceğin arkasında değişir, atmosfer rengi ürünle değişir |
-| Doku | Serum damlası düşer, cilt yüzeyinde dalga, krem yayılır, mist bulutu |
-| Formül | Lipozom 3D kesiti (temsili), etiketler sırayla açılır |
-| Rutin | İhtiyaç seçimi → rutin kartları (`products.json`) |
-| Ürünle tanış | Seçilen ürün; Kullanım / İçerik / Detay sekmeleri |
-| Işık ritüeli | Karanlık sahne, LED renkleri sırayla |
+| Açılış | Parlak zeminde dev Pink Cleansing Mist, mist püskürmesi; kamera yaklaşır, şişe dönerek etiketi gösterir |
+| Ürünlerin dünyası | Pink Mist → Vitamin C → NAD⁺ → CC Cream; ürünler ışık taramasıyla değişir, atmosfer ürün rengini alır |
+| Kampanyalar | playskin.com.tr slider bannerları (web/mobil) + LED Face Mask video slaytı |
+| Doku | Serum damlası, cilt yüzeyinde dalga, krem, mist |
+| Formül | Lipozom 3D kesiti (temsili), etiketler sırayla |
+| Playskin dünyası | Yatay akan editoryal galeri (Drive'daki çekimler, CC Cream videosu) |
+| Playskin'de yeni | Derma Calm videosu + 'Playskin'de yeni' slider ürünleri |
+| Rutin / Ürünle tanış | İhtiyaç seçimi, `products.json` |
+| LED Face Mask | Video kaydırmayla oynar; renk adları videodaki ışıkla eşzamanlı |
 
-- Ürün şişeleri playskin.com.tr'deki 2400 px ambalaj görsellerinden kesildi ve silindire sarıldı; etiket birebir korunur.
-- `products.json` playskin.com.tr ürün sayfalarından alındı. Rutin eşleştirmeleri örnektir, onay bekler.
-- LED maske için ürün bilgisi yok; bölümde yer tutucu metin var.
-- WebGL yoksa yazılar ve rutin yine çalışır; açılışta düz ürün görseli gösterilir.
+- Şişeler playskin.com.tr ve Drive'daki ambalaj görsellerinden kesildi; etiket birebir korunur.
+- Videolar `assets/lab/video/` içinde, kaydırmayla sarılabilmesi için sık anahtar kare ile kodlandı.
+- Rutin eşleştirmeleri örnektir, onay bekler.

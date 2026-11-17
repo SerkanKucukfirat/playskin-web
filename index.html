@@ -22,14 +22,13 @@
 <body>
 
 <canvas id="gl" aria-hidden="true"></canvas>
-<div class="flash" aria-hidden="true"></div>
 
 <header class="hdr">
   <a href="index.html" class="hdr-logo" aria-label="Playskin ana sayfa"><img src="assets/logo-light.png" alt="Playskin" width="1400" height="147"></a>
   <nav aria-label="Ana menü" class="hdr-nav">
     <a href="#rutin">Rutin</a>
     <a href="urunler.html">Ürünler</a>
-    <a href="laboratuvar.html">Laboratuvar</a>
+    <a href="#led">LED Mask</a>
     <a href="iletisim.html">İletişim</a>
   </nav>
 </header>
@@ -38,15 +37,15 @@
 
 <main>
 
-<!-- 1. Büyük açılış -->
-<section id="acilis" class="pin" style="--len: 320" aria-label="Açılış">
+<!-- 1. Açılış -->
+<section id="acilis" class="pin" style="--len: 300" aria-label="Açılış">
   <div class="stick">
-    <div class="ov intro" data-sec="acilis" data-in="-1" data-out="0.24">
+    <div class="ov intro" data-sec="acilis" data-in="-1" data-out="0.26">
       <p class="eyebrow">PLAY YOUR SKIN</p>
       <h1 class="display">Cildini keşfet.<br><span class="soft">Rutinini yarat.</span></h1>
-      <p class="hint"><span class="hint-line" aria-hidden="true"></span>Kaydır ve damlanın içine gir</p>
+      <p class="hint"><span class="hint-line" aria-hidden="true"></span>Kaydır, Pink Mist'e yaklaş</p>
     </div>
-    <div class="ov callouts" data-sec="acilis" data-in="0.76" data-out="2">
+    <div class="ov callouts" data-sec="acilis" data-in="0.74" data-out="2">
       <p class="tag tag-a">Mesoclean <b>Pink Cleansing Mist</b></p>
       <p class="tag tag-b">B3 · B5 · B6 · C · E<br><b>Vitamin Complex 5</b></p>
       <p class="tag tag-c">All in one vitamin cleanser · 100 ml</p>
@@ -55,12 +54,12 @@
   </div>
 </section>
 
-<!-- 2. Ürünün dünyasına giriş -->
-<section id="dunyalar" class="pin" style="--len: 460" aria-label="Ürünlerin dünyası">
+<!-- 2. Ürünlerin dünyası -->
+<section id="dunyalar" class="pin" style="--len: 540" aria-label="Ürünlerin dünyası">
   <div class="stick">
-    <p class="ov counter" data-sec="dunyalar" data-in="-1" data-out="2"><span class="counter-now">01</span> / 03</p>
+    <p class="ov counter" data-sec="dunyalar" data-in="-1" data-out="2"><span class="counter-now">01</span> / 04</p>
 
-    <article class="ov world" data-sec="dunyalar" data-in="-1" data-out="0.25" style="--acc: #F0569B">
+    <article class="ov world" data-sec="dunyalar" data-in="-1" data-out="0.24" style="--acc: #F0569B">
       <p class="eyebrow">Temizle · Pembe zerrecikler</p>
       <h2 class="h2">Pink Cleansing Mist</h2>
       <p class="lead">En inatçı makyajı tek adımda temizlerken cildi ferahlatan ve aydınlatan yüksek performanslı bir temizleyici.</p>
@@ -68,7 +67,7 @@
       <a class="link" href="https://www.playskin.com.tr/urun/mesoclean-pink-cleansing-mist/">Ürünü incele</a>
     </article>
 
-    <article class="ov world" data-sec="dunyalar" data-in="0.29" data-out="0.65" style="--acc: #E88A1A">
+    <article class="ov world" data-sec="dunyalar" data-in="0.29" data-out="0.5" style="--acc: #E88A1A">
       <p class="eyebrow">Aydınlat · Işık alan serum</p>
       <h2 class="h2">Vitamin C Hexapeptide Serum</h2>
       <p class="lead">%15 stabilize C vitamini içeriği ile cilde ışıltılı bir görünüm kazandırırken cilt dokusu ve tonunu iyileştirir.</p>
@@ -76,18 +75,70 @@
       <a class="link" href="https://www.playskin.com.tr/urun/vitamin-c-hexapeptide-serum/">Ürünü incele</a>
     </article>
 
-    <article class="ov world" data-sec="dunyalar" data-in="0.69" data-out="2" style="--acc: #2C8C9C">
+    <article class="ov world" data-sec="dunyalar" data-in="0.54" data-out="0.75" style="--acc: #2C8C9C">
       <p class="eyebrow">Yenile · Gümüş ve su</p>
       <h2 class="h2">NAD⁺ Peptide Serum</h2>
       <p class="lead">NAD⁺, güçlü peptit kompleksi ve bariyer destekleyici aktifleri bir araya getirerek yaşlanma belirtilerine karşı çok yönlü bakım sunar.</p>
       <ul class="chips"><li>NAD⁺</li><li>Peptit Kompleksi</li><li>Niacinamide</li></ul>
       <a class="link" href="https://www.playskin.com.tr/urun/nad-peptide-boosting-concentrate-serum/">Ürünü incele</a>
     </article>
+
+    <article class="ov world" data-sec="dunyalar" data-in="0.8" data-out="2" style="--acc: #B9785F">
+      <p class="eyebrow">Eşitle · Gül altın ışık</p>
+      <h2 class="h2">CC Cream</h2>
+      <p class="lead">Lipozom teknolojisiyle desteklenen formülü sayesinde cilt tonunu eşitlemeye, kusur görünümünü azaltmaya ve cilde daha aydınlık bir görünüm kazandırmaya yardımcı olur.</p>
+      <ul class="chips"><li>SPF 40</li><li>Alfa Arbutin</li><li>Hyalüronik Asit</li></ul>
+      <a class="link" href="https://www.playskin.com.tr/urun/cc-cream/">Ürünü incele</a>
+    </article>
+  </div>
+</section>
+
+<!-- Kampanya slider -->
+<section id="kampanya" class="flow slider-sec" aria-labelledby="kampanya-baslik">
+  <div class="wrap">
+    <div class="sec-row">
+      <div>
+        <p class="eyebrow">Kampanyalar</p>
+        <h2 class="h3" id="kampanya-baslik">Playskin'de şimdi</h2>
+      </div>
+      <div class="car-ctrl">
+        <button type="button" class="car-btn" data-car-prev aria-label="Önceki slayt"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <button type="button" class="car-btn" data-car-next aria-label="Sonraki slayt"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="car" data-car role="region" aria-roledescription="carousel" aria-label="Kampanyalar">
+      <div class="car-track">
+        <a class="slide slide-video" href="#led" aria-roledescription="slide" aria-label="1 / 6 · Playskin LED Face Mask">
+          <video class="sv-video" muted loop playsinline preload="none" data-src-desktop="assets/lab/video/led-neon.mp4" data-src-phone="assets/lab/video/led-story.mp4" poster="assets/lab/video/led-neon-poster.jpg" aria-hidden="true"></video>
+          <span class="sv-text">
+            <span class="eyebrow">Yeni</span>
+            <span class="sv-title">PLAYSKIN<br>LED Face Mask</span>
+            <span class="sv-cta">Işık ritüelini keşfet</span>
+          </span>
+        </a>
+        <a class="slide" href="https://www.playskin.com.tr/urun/nad-peptide-boosting-concentrate-serum/" aria-roledescription="slide" aria-label="2 / 6 · NAD+ Peptide serisi">
+          <picture><source media="(max-width: 760px)" srcset="assets/lab/slider/nad-mobil.webp"><img src="assets/lab/slider/nad-web.webp" alt="Beklenen NAD+ Peptide serisi stoklarda! Cildinin enerjisini yeniden keşfet." width="1939" height="811" loading="lazy"></picture>
+        </a>
+        <a class="slide" href="https://www.playskin.com.tr/urun/cc-cream/" aria-roledescription="slide" aria-label="3 / 6 · CC Cream">
+          <picture><source media="(max-width: 760px)" srcset="assets/lab/slider/cc-mobil.webp"><img src="assets/lab/slider/cc-web.webp" alt="CC Cream: cilt tonunda dengeli bir görünüm. SPF 40 içeren hafif dokusuyla günlük bakım rutinine eşlik eder." width="1939" height="811" loading="lazy"></picture>
+        </a>
+        <a class="slide" href="https://www.playskin.com.tr/urun/derma-calm-recovery-cream/" aria-roledescription="slide" aria-label="4 / 6 · Derma Calm Recovery Cream">
+          <picture><source media="(max-width: 760px)" srcset="assets/lab/slider/dermacalm-mobil.webp"><img src="assets/lab/slider/dermacalm-web.webp" alt="Derma Calm Recovery Cream: profesyonel bakım sonrası cilt bakımına eşlik eder." width="1939" height="811" loading="lazy"></picture>
+        </a>
+        <a class="slide" href="urunler.html#katalog" aria-roledescription="slide" aria-label="5 / 6 · Exoline serisi">
+          <picture><source media="(max-width: 760px)" srcset="assets/lab/slider/exoline-mobil.webp"><img src="assets/lab/slider/exoline-web.webp" alt="Exoline serisi: exosome ve liposome teknolojisi, cilt bakımında ileri teknoloji." width="1939" height="811" loading="lazy"></picture>
+        </a>
+        <a class="slide" href="urunler.html#katalog" aria-roledescription="slide" aria-label="6 / 6 · Kore cam cilt protokolü">
+          <picture><source media="(max-width: 760px)" srcset="assets/lab/slider/korecamcilt-mobil.webp"><img src="assets/lab/slider/korecamcilt-web.webp" alt="Kore cam cilt protokolü: profesyoneller için geliştirilmiş, yüksek performanslı bakım rutini." width="1940" height="806" loading="lazy"></picture>
+        </a>
+      </div>
+      <div class="car-dots" role="group" aria-label="Slayt seç"></div>
+    </div>
   </div>
 </section>
 
 <!-- 3. Dokuyu hisset -->
-<section id="doku" class="pin" style="--len: 400" aria-label="Dokuyu hisset">
+<section id="doku" class="pin" style="--len: 380" aria-label="Dokuyu hisset">
   <div class="stick">
     <div class="ov sec-head" data-sec="doku" data-in="-1" data-out="2">
       <p class="eyebrow">03 · Doku</p>
@@ -121,6 +172,56 @@
   </div>
 </section>
 
+<!-- Galeri: Playskin dünyası -->
+<section id="galeri" class="pin" style="--len: 340" aria-labelledby="galeri-baslik">
+  <div class="stick">
+    <div class="gal-head">
+      <div>
+        <p class="eyebrow">Playskin dünyası</p>
+        <h2 class="h3" id="galeri-baslik">Işık, doku, an.</h2>
+      </div>
+      <a class="link link-ghost" href="urunler.html">Ürünleri keşfet</a>
+    </div>
+    <div class="gal-track">
+      <figure class="gcard"><img src="assets/lab/gallery/cc-hands.webp" alt="Işık içinde iki elin arasında süzülen CC Cream" width="720" height="1280" loading="lazy"><figcaption>CC Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/derma-water.webp" alt="Su yüzeyinde ışık yansımaları arasında Derma Calm Recovery Cream" width="720" height="1280" loading="lazy"><figcaption>Derma Calm Recovery Cream</figcaption></figure>
+      <figure class="gcard"><video class="auto-video" muted loop playsinline preload="none" data-src="assets/lab/video/cc-model.mp4" poster="assets/lab/video/cc-model-poster.jpg" aria-label="CC Cream ile model"></video><figcaption>CC Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/cc-leaf.webp" alt="Altın yapraklar ve gölgeler arasında CC Cream" width="720" height="1280" loading="lazy"><figcaption>CC Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/vitalshot-city.webp" alt="Gökdelenler arasında dev Vital Shot 300 şişesi" width="720" height="1280" loading="lazy"><figcaption>Vital Shot 300</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/derma-splash.webp" alt="Suya düşen Derma Calm Recovery Cream" width="720" height="1280" loading="lazy"><figcaption>Derma Calm Recovery Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/cc-swing.webp" alt="Pembe bulutlar üzerinde salıncakta CC Cream" width="720" height="1280" loading="lazy"><figcaption>CC Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/derma-model.webp" alt="Mavi zeminde dev Derma Calm şişesine yaslanan model" width="720" height="1280" loading="lazy"><figcaption>Derma Calm Recovery Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/cc-street.webp" alt="Playskin binası önünde dev CC Cream taşıyan model" width="720" height="1280" loading="lazy"><figcaption>CC Cream</figcaption></figure>
+      <figure class="gcard"><img src="assets/lab/gallery/cc-light.webp" alt="Su yansımalı ışıkta duvara yaslanmış CC Cream" width="720" height="1280" loading="lazy"><figcaption>CC Cream</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Playskin'de yeni -->
+<section id="yeni" class="flow slider-sec" aria-labelledby="yeni-baslik">
+  <div class="wrap">
+    <div class="sec-row">
+      <div>
+        <p class="eyebrow">New in</p>
+        <h2 class="h3" id="yeni-baslik">Playskin'de yeni</h2>
+      </div>
+      <a class="link link-ghost" href="urunler.html">Tüm ürünler</a>
+    </div>
+    <div class="newin-grid">
+      <a class="feature" href="https://www.playskin.com.tr/urun/derma-calm-recovery-cream/">
+        <video class="auto-video" muted loop playsinline preload="none" data-src="assets/lab/video/dermacalm.mp4" poster="assets/lab/video/dermacalm-poster.jpg" aria-hidden="true"></video>
+        <span class="feature-text"><span class="ni-tag">Yeni</span><b>Derma Calm Recovery Cream</b><span>Profesyonel bakım sonrası cilde eşlik eder.</span></span>
+      </a>
+      <ul class="newin">
+        <li><a href="https://www.playskin.com.tr/urun/nad-peptide-boosting-concentrate-serum/"><span class="ni-img"><img src="assets/lab/slider/yeni-nad.webp" alt="" width="900" height="900" loading="lazy"></span><span class="ni-tag">Yeni</span><b>NAD⁺ Peptide Serisi</b><span>Serum ve krem</span></a></li>
+        <li><a href="https://www.playskin.com.tr/urun/cc-cream/"><span class="ni-img"><img src="assets/lab/slider/yeni-cc.webp" alt="" width="900" height="900" loading="lazy"></span><span class="ni-tag">Yeni</span><b>CC Cream</b><span>SPF 40 · 40 ml</span></a></li>
+        <li><a href="https://www.playskin.com.tr/urun/bb-cushion/"><span class="ni-img"><img src="assets/lab/slider/yeni-cushion.webp" alt="" width="900" height="900" loading="lazy"></span><span class="ni-tag">Yeni</span><b>BB Cushion</b><span>Glow Cushion BB · 17 gr</span></a></li>
+        <li><a href="https://www.playskin.com.tr/urun/derma-calm-recovery-cream/"><span class="ni-img"><img src="assets/lab/slider/yeni-dermacalm.webp" alt="" width="900" height="900" loading="lazy"></span><span class="ni-tag">Yeni</span><b>Derma Calm</b><span>Recovery Cream · 200 ml</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- 5. Kendi rutinini oluştur -->
 <section id="rutin" class="flow" aria-labelledby="rutin-baslik">
   <div class="wrap">
@@ -142,20 +243,23 @@
   </div>
 </section>
 
-<!-- LED -->
-<section id="led" class="pin dark" style="--len: 340" aria-label="LED ışık ritüeli">
+<!-- 7. LED Face Mask -->
+<section id="led" class="pin dark" style="--len: 420" aria-label="Playskin LED Face Mask">
   <div class="stick">
-    <div class="ov sec-head" data-sec="led" data-in="-1" data-out="2">
-      <p class="eyebrow">07 · Işık ritüeli</p>
-      <h2 class="h2">Karanlıkta<br>ışık sırayla açılır.</h2>
-      <p class="small">[LED maske: ürün adı ve protokol bilgisi eklenecek]</p>
+    <div class="led-media">
+      <video class="led-video" muted playsinline preload="auto" data-src-desktop="assets/lab/video/led-neon.mp4" data-src-phone="assets/lab/video/led-story.mp4" poster="assets/lab/video/led-neon-poster.jpg" aria-hidden="true"></video>
     </div>
-    <figure class="led-face" aria-hidden="true"><img src="assets/model-water.webp" alt="" width="526" height="664"><span class="led-tint"></span></figure>
+    <div class="ov sec-head led-head" data-sec="led" data-in="-1" data-out="2">
+      <p class="eyebrow">07 · Işık ritüeli</p>
+      <h2 class="h2">PLAYSKIN<br>LED Face Mask</h2>
+      <p class="small">Karanlıkta ışık sırayla açılır. Kaydırdıkça renkler değişir.</p>
+    </div>
     <ol class="led-list">
-      <li class="ov" data-sec="led" data-in="0.08" data-out="0.3" style="--c:#FF3B3B">Kırmızı</li>
-      <li class="ov" data-sec="led" data-in="0.3" data-out="0.52" style="--c:#FFB13B">Amber</li>
-      <li class="ov" data-sec="led" data-in="0.52" data-out="0.74" style="--c:#3BFF8A">Yeşil</li>
-      <li class="ov" data-sec="led" data-in="0.74" data-out="2" style="--c:#3B8BFF">Mavi</li>
+      <li data-t0="0" data-t1="2.05" style="--c:#B04DFF">Mor</li>
+      <li data-t0="2.05" data-t1="4.1" style="--c:#2FB4FF">Mavi</li>
+      <li data-t0="4.1" data-t1="6.2" style="--c:#FFB13B">Amber</li>
+      <li data-t0="6.2" data-t1="8.3" style="--c:#FF3B4B">Kırmızı</li>
+      <li data-t0="8.3" data-t1="99" style="--c:#FFFFFF">Işığın ritmi</li>
     </ol>
   </div>
 </section>
